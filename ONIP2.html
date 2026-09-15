@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galerie | CREMI</title>
+
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="galerie.css">
+<style>
+    ```css
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f8fc;
+    color: #10233f;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   BOUTON RETOUR
+========================================================= */
+
+.btn-retour {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 20px;
+
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #0876e8,
+        #0754ad
+    );
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 8px 25px rgba(7, 84, 173, 0.25);
+
+    z-index: 1000;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn-retour i {
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+.btn-retour:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(7, 84, 173, 0.35);
+}
+
+.btn-retour:hover i {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.galerie-header {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding:
+        110px 20px 55px;
+}
+
+.section-tag {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 8px 18px;
+
+    color: #0876e8;
+
+    background: #e6f3ff;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.galerie-header h1 {
+    font-size: clamp(32px, 5vw, 55px);
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+
+    color: #031b3a;
+}
+
+.galerie-header p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GALERIE
+========================================================= */
+
+.galerie {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding-bottom: 80px;
+}
+
+.galerie-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CARTE IMAGE
+========================================================= */
+
+.image-card {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 47, 80, 0.10);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(15, 47, 80, 0.18);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(3, 27, 58, 0.80),
+            rgba(3, 27, 58, 0.15)
+        );
+
+    color: white;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+.image-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay i {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 20px;
+}
+
+.image-overlay span {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: #031b3a;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .galerie-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .image-card {
+        height: 280px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .btn-retour {
+        top: 15px;
+        left: 15px;
+
+        padding: 11px 16px;
+
+        font-size: 14px;
+    }
+
+    .galerie-header {
+        padding:
+            100px 20px 40px;
+    }
+
+    .galerie-header h1 {
+        font-size: 32px;
+    }
+
+    .galerie-header p {
+        font-size: 15px;
+    }
+
+    .galerie-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .image-card {
+        height: 250px;
+
+        border-radius: 16px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .btn-retour span {
+        display: none;
+    }
+
+    .btn-retour {
+        width: 45px;
+        height: 45px;
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+    .galerie-header h1 {
+        font-size: 28px;
+    }
+
+    .image-card {
+        height: 220px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- =========================
+         BOUTON RETOUR
+    ========================== -->
+    <a href="index.html" class="btn-retour">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Retour</span>
+    </a>
+
+
+    <!-- =========================
+         EN-TÊTE
+    ========================== -->
+    <header class="galerie-header">
+
+        <span class="section-tag">
+            GALERIE
+        </span>
+        <p>
+           Images de la Formation des agents et cadres de l'ONIP
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         GALERIE
+    ========================== -->
+    <main class="galerie">
+
+        <div class="galerie-grid">
+
+            <div class="image-card">
+                <img src="E1.JPEG" alt="Image 1">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E2.JPEG" alt="Image 2">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E3.JPEG" alt="Image 3">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E4.JPEG" alt="Image 4">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E5.JPEG" alt="Image 5">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E6.JPEG" alt="Image 6">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E7.JPEG" alt="Image 7">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E8.JPEG" alt="Image 8">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E9.JPEG" alt="Image 9">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E10.JPEG" alt="Image 10">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="E11.JPEG" alt="Image 11">
+                <div class="image-overlay">
+                    <i class="fa-solid fa-image"></i>
+                    <span></span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <p>
+            © 2026 CREMI — Tous droits réservés.
+        </p>
+    </footer>
+
+</body>
+</html>

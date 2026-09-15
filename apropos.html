@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Découvrez le Centre de Recherche en Mathématiques et en Informatique (CREMI), ses missions, formations, publications, partenaires et activités.">
+
+    <title>À propos du CREMI | Centre de Recherche en Mathématiques et en Informatique</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* =========================================================
+   PAGE À PROPOS - CREMI
+========================================================= */
+
+.about-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+    z-index: 100;
+}
+
+.header-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-link {
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.header-title {
+    flex: 1;
+    text-align: center;
+}
+
+.header-title span {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #0f172a;
+}
+
+.header-title strong {
+    display: block;
+    margin-top: 4px;
+    color: #0b63ce;
+    letter-spacing: 2px;
+}
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    background: #0b63ce;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.back-home:hover {
+    background: #084c9e;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.about-hero {
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071d36 0%,
+            #0b4f91 55%,
+            #0b63ce 100%
+        );
+
+    color: #ffffff;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+.about-hero .container {
+    text-align: center;
+}
+
+.hero-label {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.about-hero h2 {
+    max-width: 900px;
+    margin: 25px auto 15px;
+
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.1;
+}
+
+.about-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.9);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.content-section {
+    padding: 85px 0;
+    background: #ffffff;
+}
+
+.light-section {
+    background: #f7f9fc;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading span {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #0b63ce;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+.section-intro {
+    max-width: 850px;
+    margin-bottom: 35px;
+
+    color: #475569;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TEXT CARD
+========================================================= */
+
+.text-card {
+    max-width: 1000px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #0b63ce;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+}
+
+.text-card p {
+    margin: 0 0 20px;
+
+    color: #475569;
+
+    line-height: 1.85;
+    font-size: 16px;
+}
+
+.text-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.info-card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(15,23,42,0.05);
+
+    transition: 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15,23,42,0.10);
+}
+
+.card-number {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #eaf3ff;
+    color: #0b63ce;
+
+    border-radius: 10px;
+
+    font-weight: 900;
+}
+
+.info-card h3 {
+    margin: 0 0 12px;
+
+    color: #0f172a;
+    font-size: 19px;
+}
+
+.info-card p {
+    margin: 0;
+
+    color: #64748b;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MISSIONS
+========================================================= */
+
+.mission-list {
+    display: grid;
+    gap: 14px;
+}
+
+.mission-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding: 20px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.mission-item span {
+    min-width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0b63ce;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.mission-item p {
+    margin: 5px 0 0;
+
+    color: #475569;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LIVRES
+========================================================= */
+
+.books-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.book-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(15,23,42,0.06);
+
+    transition: 0.25s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(15,23,42,0.12);
+}
+
+.book-image {
+    width: 100%;
+    height: 350px;
+
+    background: #e9eef5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.book-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.book-content {
+    padding: 25px;
+}
+
+.book-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+
+    color: #0b63ce;
+}
+
+.book-content h3 {
+    margin: 0 0 10px;
+
+    color: #0f172a;
+}
+
+.book-content p {
+    margin: 0;
+
+    color: #64748b;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CERTIFICAT
+========================================================= */
+
+.certificate-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 0.8fr);
+
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(15,23,42,0.07);
+}
+
+.certificate-image {
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef2f7;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+
+    max-height: 650px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.certificate-content h3 {
+    margin: 10px 0 15px;
+
+    font-size: 28px;
+    color: #0f172a;
+}
+
+.certificate-content p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MODULES
+========================================================= */
+
+.training-pole {
+    margin-bottom: 30px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(15,23,42,0.04);
+}
+
+.pole-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.pole-header > span {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0b63ce;
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.pole-header h3 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.pole-header p {
+    margin: 0;
+
+    color: #0b63ce;
+    font-weight: 700;
+}
+
+.training-pole ol {
+    margin: 0;
+    padding-left: 25px;
+
+    columns: 2;
+    column-gap: 45px;
+}
+
+.training-pole li {
+    margin-bottom: 12px;
+
+    padding-left: 5px;
+
+    color: #475569;
+    line-height: 1.6;
+
+    break-inside: avoid;
+}
+
+
+/* =========================================================
+   TABLEAU
+========================================================= */
+
+.table-wrapper {
+    overflow-x: auto;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.poles-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 650px;
+
+    background: #ffffff;
+}
+
+.poles-table th {
+    padding: 18px;
+
+    background: #0b63ce;
+    color: #ffffff;
+
+    text-align: left;
+}
+
+.poles-table td {
+    padding: 18px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #475569;
+}
+
+.poles-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.poles-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================================================
+   AVANTAGES
+========================================================= */
+
+.advantages-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.advantages-grid div {
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    color: #334155;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   VALEURS
+========================================================= */
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.value-box {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.value-box strong {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #0b63ce;
+
+    font-size: 30px;
+}
+
+.value-box h3 {
+    margin: 0;
+
+    color: #0f172a;
+}
+
+
+/* =========================================================
+   PARTENAIRES
+========================================================= */
+
+.partners-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.partner-card {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+}
+
+.partner-card h3 {
+    margin: 0 0 12px;
+
+    color: #0f172a;
+}
+
+.partner-card p {
+    margin: 0 0 10px;
+
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.partner-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PRIX
+========================================================= */
+
+.price-card {
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071d36,
+            #0b63ce
+        );
+
+    border-radius: 16px;
+
+    color: #ffffff;
+}
+
+.price-value {
+    text-align: center;
+}
+
+.price-value span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    opacity: 0.8;
+}
+
+.price-value strong {
+    display: block;
+
+    font-size: 58px;
+    line-height: 1;
+}
+
+.price-value small {
+    display: block;
+
+    margin-top: 8px;
+
+    opacity: 0.8;
+}
+
+.price-description p {
+    margin: 0 0 15px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.9);
+}
+
+.price-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PRODUITS
+========================================================= */
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.product-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.product-item span {
+    min-width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf3ff;
+    color: #0b63ce;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.product-item p {
+    margin: 5px 0 0;
+
+    color: #475569;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    padding: 85px 0;
+
+    background: #071d36;
+    color: #ffffff;
+}
+
+.contact-box {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    padding: 45px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.04);
+}
+
+.contact-title > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #70b7ff;
+
+    font-weight: 900;
+}
+
+.contact-title h2 {
+    margin: 0 0 15px;
+
+    font-size: 40px;
+}
+
+.contact-title p {
+    margin: 0;
+
+    max-width: 600px;
+
+    color: rgba(255,255,255,0.75);
+
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.contact-details a {
+    display: block;
+
+    padding: 18px 20px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.05);
+
+    transition: 0.25s ease;
+}
+
+.contact-details a:hover {
+    background: rgba(255,255,255,0.10);
+    transform: translateX(5px);
+}
+
+.director-signature {
+    margin-top: 45px;
+
+    text-align: center;
+}
+
+.director-signature span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: rgba(255,255,255,0.65);
+}
+
+.director-signature h3 {
+    margin: 0;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.about-footer {
+    padding: 25px 0;
+
+    background: #041323;
+
+    color: rgba(255,255,255,0.65);
+}
+
+.about-footer .container {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.about-footer p {
+    margin: 0;
+}
+
+.about-footer a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLETTE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        padding: 20px 0;
+    }
+
+    .header-title {
+        flex-basis: calc(100% - 110px);
+    }
+
+    .back-home {
+        order: 3;
+    }
+
+    .cards-grid,
+    .books-grid,
+    .products-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .values-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .certificate-card,
+    .price-card,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .training-pole ol {
+        columns: 1;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .content-section {
+        padding: 60px 0;
+    }
+
+    .about-hero {
+        padding: 70px 15px;
+    }
+
+    .header-container {
+        width: 94%;
+    }
+
+    .header-title h1 {
+        font-size: 15px;
+    }
+
+    .header-title span {
+        font-size: 9px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .back-home {
+        width: 100%;
+    }
+
+    .cards-grid,
+    .books-grid,
+    .products-grid,
+    .advantages-grid,
+    .values-grid,
+    .partners-list {
+        grid-template-columns: 1fr;
+    }
+
+    .text-card,
+    .training-pole,
+    .certificate-card,
+    .price-card,
+    .contact-box {
+        padding: 22px;
+    }
+
+    .book-image {
+        height: 300px;
+    }
+
+    .certificate-image {
+        min-height: 300px;
+    }
+
+    .pole-header {
+        align-items: flex-start;
+    }
+
+    .pole-header h3 {
+        font-size: 19px;
+    }
+
+    .price-value strong {
+        font-size: 48px;
+    }
+
+    .contact-title h2 {
+        font-size: 32px;
+    }
+
+    .about-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+.certificate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: #0b63ce;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.certificate-button:hover {
+    background: #084c9e;
+    transform: translateY(-2px);
+}
+
+</style>
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="about-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo-link">
+            <img src="Logo.JPEG"
+                 alt="Logo du CREMI"
+                 class="logo">
+        </a>
+
+        <div class="header-title">
+            <span>RÉPUBLIQUE DÉMOCRATIQUE DU CONGO</span>
+
+            <h1>
+                CENTRE DE RECHERCHE EN MATHÉMATIQUES
+                ET EN INFORMATIQUE
+            </h1>
+
+            <strong>(CREMI)</strong>
+        </div>
+
+        <a href="index.html" class="back-home">
+            ← Accueil
+        </a>
+       
+
+    </div>
+
+          
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <span class="hero-label">
+            PRÉSENTATION DU CREMI
+        </span>
+
+        <h2>
+            Centre de Recherche en Mathématiques
+            et en Informatique
+        </h2>
+
+        <p>
+            Formation • Recherche scientifique • Innovation •
+            Intelligence artificielle • Édition • Développement des compétences
+        </p>
+
+    </div>
+
+</section>
+
+
+<main>
+
+
+<!-- =========================================================
+     QUI SOMMES-NOUS ?
+========================================================= -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>01</span>
+            <h2>Qui sommes-nous ?</h2>
+        </div>
+
+        <div class="text-card">
+
+            <p>
+                Créée le <strong>28 juillet 2008</strong>, le CREMI est une
+                organisation spécialisée dans la formation, la recherche
+                scientifique, l’édition et le développement des compétences
+                dans les domaines des mathématiques, de l’informatique,
+                de la statistique, de la gestion, de l’économie, de la
+                logistique, du marketing, de l’intelligence artificielle
+                et de la langue anglaise.
+            </p>
+
+            <p>
+                Également maison d’édition et acteur engagé dans la
+                promotion des affaires, nous accompagnons la production
+                scientifique, la valorisation des publications et le
+                développement des opportunités économiques.
+            </p>
+
+            <p>
+                Nous formons des professionnels compétents capables de
+                répondre aux défis du monde moderne grâce à des formations
+                théoriques et pratiques adaptées aux besoins du marché.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ENGAGEMENTS
+========================================================= -->
+
+<section class="content-section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>02</span>
+            <h2>Nos engagements</h2>
+        </div>
+
+        <div class="cards-grid">
+
+            <article class="info-card">
+                <div class="card-number">01</div>
+                <h3>Formation d'excellence</h3>
+                <p>
+                    Proposer des formations de qualité adaptées
+                    aux besoins des apprenants et des organisations.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <div class="card-number">02</div>
+                <h3>Recherche scientifique</h3>
+                <p>
+                    Encourager la recherche scientifique et
+                    le développement de nouvelles connaissances.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <div class="card-number">03</div>
+                <h3>Innovation et créativité</h3>
+                <p>
+                    Favoriser l'innovation, la créativité et
+                    l'utilisation des nouvelles technologies.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <div class="card-number">04</div>
+                <h3>Accompagnement</h3>
+                <p>
+                    Accompagner les personnes physiques et morales
+                    dans leurs projets et leur développement.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <div class="card-number">05</div>
+                <h3>Entrepreneuriat</h3>
+                <p>
+                    Participer au développement des affaires et
+                    des compétences entrepreneuriales.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <div class="card-number">06</div>
+                <h3>Partenariats stratégiques</h3>
+                <p>
+                    Développer des collaborations avec des acteurs
+                    nationaux et internationaux.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MISSIONS
+========================================================= -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>03</span>
+            <h2>Nos missions</h2>
+        </div>
+
+        <div class="mission-list">
+
+            <div class="mission-item">
+                <span>01</span>
+                <p>
+                    Concevoir et organiser des formations spécialisées.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>02</span>
+                <p>
+                    Développer les compétences en mathématiques,
+                    statistique, informatique, IA, gestion, comptabilité,
+                    économie, logistique et langues.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>03</span>
+                <p>
+                    Proposer des formations initiales, continues
+                    et de perfectionnement.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>04</span>
+                <p>
+                    Développer des formations en présentiel,
+                    à distance et hybrides.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>05</span>
+                <p>
+                    Adapter les programmes de formation aux besoins
+                    du marché du travail.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>06</span>
+                <p>
+                    Former des professionnels capables d'utiliser
+                    les outils modernes dans leur environnement de travail.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>07</span>
+                <p>
+                    Développer les compétences entrepreneuriales
+                    et managériales.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>08</span>
+                <p>
+                    Délivrer des attestations, certificats et autres
+                    documents de formation conformément aux règles du Centre.
+                </p>
+            </div>
+
+            <div class="mission-item">
+                <span>09</span>
+                <p>
+                    Accompagner les apprenants dans leur insertion
+                    professionnelle.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATIONS / LIVRES
+========================================================= -->
+
+<section class="content-section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>04</span>
+            <h2>Nos publications</h2>
+        </div>
+
+        <div class="section-intro">
+            <p>
+                Le CREMI intervient également dans le domaine de
+                l'édition et de la production scientifique.
+                Découvrez quelques publications produites par le Centre.
+            </p>
+        </div>
+
+        <div class="books-grid">
+
+            <!-- LIVRE 1 -->
+
+            <article class="book-card">
+
+                <div class="book-image">
+
+                    <img src="MATH2.JPEG"
+                         alt="Livre publié par le CREMI"
+                         loading="lazy">
+
+                </div>
+
+                <div class="book-content">
+
+                    <span class="book-label">
+                        PUBLICATION CREMI
+                    </span>
+
+                    <h3>
+                        Ouvrage publié par le CREMI
+                    </h3>
+
+                    <p>
+                        Présentation d'une publication produite
+                        ou éditée par le Centre.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- LIVRE 2 -->
+
+            <article class="book-card">
+
+                <div class="book-image">
+
+                    <img src="MATH1.JPEG"
+                         alt="Livre publié par le CREMI"
+                         loading="lazy">
+
+                </div>
+
+                <div class="book-content">
+
+                    <span class="book-label">
+                        PUBLICATION CREMI
+                    </span>
+
+                    <h3>
+                        Ouvrage publié par le CREMI
+                    </h3>
+
+                    <p>
+                        Présentation d'une publication produite
+                        ou éditée par le Centre.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- LIVRE 3 -->
+
+            <article class="book-card">
+
+                <div class="book-image">
+
+                    <img src="EXETAT.JFIF"
+                         alt="Livre publié par le CREMI"
+                         loading="lazy">
+
+                </div>
+
+                <div class="book-content">
+
+                    <span class="book-label">
+                        PUBLICATION CREMI
+                    </span>
+
+                    <h3>
+                        Ouvrage publié par le CREMI
+                    </h3>
+
+                    <p>
+                        Présentation d'une publication produite
+                        ou éditée par le Centre.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CERTIFICAT
+========================================================= -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>05</span>
+            <h2>Certificat de l'entreprise</h2>
+        </div>
+
+        <div class="certificate-card">
+
+            <div class="certificate-image">
+
+                <img src="CERTIFICA.PNG"
+                     alt="Certificat officiel du CREMI"
+                     loading="lazy">
+
+            </div>
+
+            <div class="certificate-content">
+
+                <span class="book-label">
+                    DOCUMENT OFFICIEL
+                </span>
+
+                <h3>
+                    Certificat du CREMI
+                </h3>
+
+                <p>
+                    Cette section présente le certificat officiel
+                    de l'entreprise. L'image pourra être remplacée
+                    par le document fourni par le CREMI.
+                </p>
+                <a href="verification.html" class="certificate-button">
+                 🔎 Vérifier un certificat
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MODULES DE FORMATION
+========================================================= -->
+
+<section class="content-section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>06</span>
+            <h2>Nos modules de formation</h2>
+        </div>
+
+        <div class="section-intro">
+
+            <p>
+                Le CREMI propose un ensemble de
+                <strong>59 modules de formation</strong>
+                répartis dans six grands pôles.
+            </p>
+
+        </div>
+
+
+        <!-- PÔLE 1 -->
+
+        <article class="training-pole">
+
+            <div class="pole-header">
+                <span>I</span>
+
+                <div>
+                    <h3>Pôle Mathématiques</h3>
+                    <p>
+                        Modéliser et résoudre les problèmes
+                    </p>
+                </div>
+            </div>
+
+            <ol>
+                <li>Module de Mathématiques Générales</li>
+                <li>Module d'Analyse mathématique</li>
+                <li>Module d'Algèbre et Algèbre linéaire</li>
+                <li>Module de Calcul matriciel</li>
+                <li>Module de Probabilités</li>
+                <li>Module de Mathématiques financières</li>
+                <li>Module de Mathématiques appliquées</li>
+                <li>Module de Modélisation mathématique</li>
+                <li>Module d'Optimisation mathématique</li>
+                <li>Module de Recherche opérationnelle et Programmation linéaire</li>
+                <li>Module de Méthodes et Calcul numériques</li>
+                <li>Module de Théorie des graphes</li>
+                <li>Module de Mathématiques pour l'informatique et l'intelligence artificielle</li>
+                <li>Module de Géométrie analytique</li>
+                <li>Module de logiciels mathématiques</li>
+            </ol>
+
+        </article>
+
+
+        <!-- PÔLE 2 -->
+
+        <article class="training-pole">
+
+            <div class="pole-header">
+                <span>II</span>
+
+                <div>
+                    <h3>Pôle Statistique et Économétrie</h3>
+                    <p>
+                        Analyser les données
+                    </p>
+                </div>
+            </div>
+
+            <ol start="16">
+                <li>Module de Statistique descriptive et inférentielle</li>
+                <li>Module de sondage et techniques d'enquête</li>
+                <li>Module d'Analyse de Données et Analyse Multivariée</li>
+                <li>Module d'économétrie</li>
+                <li>Module de séries chronologiques et prévisions</li>
+                <li>Module de Démographie</li>
+                <li>Module de statistiques appliquées</li>
+                <li>Module de logiciels statistiques et Démographiques : Excel avancé, XLStat, R, Python, SPSS, Stata, etc.</li>
+            </ol>
+
+        </article>
+
+
+        <!-- PÔLE 3 -->
+
+        <article class="training-pole">
+
+            <div class="pole-header">
+                <span>III</span>
+
+                <div>
+                    <h3>Pôle Informatique</h3>
+                    <p>
+                        Construire les solutions
+                    </p>
+                </div>
+            </div>
+
+            <ol start="24">
+                <li>Module d'informatique général et Bureautique Avancée</li>
+                <li>Module de Programmation : Python, Java, etc.</li>
+                <li>Module de Bases de données et Gestion des données</li>
+                <li>Module de Conception de sites Web et de Développement mobiles</li>
+                <li>Module de Développement logiciel et Développement d'Applications</li>
+                <li>Module de Systèmes d'information et Administration Système</li>
+                <li>Module de Réseaux informatiques avancés et Administration réseau</li>
+                <li>Module de Cybersécurité</li>
+            </ol>
+
+        </article>
+
+
+        <!-- PÔLE 4 -->
+
+        <article class="training-pole">
+
+            <div class="pole-header">
+                <span>IV</span>
+
+                <div>
+                    <h3>Pôle Comptabilité et Gestion</h3>
+                    <p>
+                        Gérer les organisations
+                    </p>
+                </div>
+            </div>
+
+            <ol start="32">
+                <li>Module de Comptabilité : Générale, Analytique, Approfondie</li>
+                <li>Module de Gestion et Analyse financière</li>
+                <li>Module de Fiscalité</li>
+                <li>Module de Gestion budgétaire et Contrôle de gestion</li>
+                <li>Module d'Audit financier et gestion des risques</li>
+                <li>Module de Gestion des ressources humaines</li>
+                <li>Module de Management des organisations et Management Stratégique</li>
+                <li>Module d'IA et analyse des marchés</li>
+                <li>Module d'IA et analyse des prix</li>
+                <li>Module d'IA appliquée aux enquêtes</li>
+                <li>Module de Gestion de projet</li>
+                <li>Module d'Entrepreneuriat, Business Plan et Étude de Faisabilité</li>
+                <li>Module de Logistique, Achats, Approvisionnements et Stocks</li>
+                <li>Module de Création et gestion d'entreprise</li>
+                <li>Module de Transport et distribution</li>
+                <li>Module de Marketing digital</li>
+                <li>Module de Gestion commerciale et Techniques de Vente</li>
+                <li>Module de logiciels de gestion et ERP : Sage-100, Odoo, QuickBooks, etc.</li>
+            </ol>
+
+        </article>
+
+
+        <!-- PÔLE 5 -->
+
+        <article class="training-pole">
+
+            <div class="pole-header">
+                <span>V</span>
+
+                <div>
+                    <h3>Pôle Langues</h3>
+                    <p>
+                        Communiquer et travailler efficacement
+                    </p>
+                </div>
+            </div>
+
+            <ol start="50">
+                <li>Module d'Anglais général</li>
+                <li>Module d'Anglais Professionnel et des Affaires</li>
+                <li>
+                    Module d'Anglais Informatique
+                    <strong>ECS - English and Computer Science</strong>
+                </li>
+            </ol>
+
+        </article>
+
+
+        <!-- PÔLE 6 -->
+
+        <article class="training-pole">
+
+            <div class="pole-header">
+                <span>VI</span>
+
+                <div>
+                    <h3>
+                        Pôle Recherche, Innovation et Intelligence Artificielle
+                    </h3>
+
+                    <p>
+                        Innover et transformer
+                    </p>
+                </div>
+            </div>
+
+            <ol start="53">
+                <li>Module de Méthodologie de recherche scientifique</li>
+                <li>Module d'Analyse et traitement des données de recherche</li>
+                <li>Module Gestion des références bibliographiques</li>
+                <li>
+                    Module de rédaction et publication scientifique
+                    : Articles, Mémoires, Thèses
+                </li>
+                <li>Module d'Intelligence artificielle pour la recherche</li>
+                <li>Module d'IA Appliquée à l'Éducation et la Formation</li>
+                <li>
+                    Module d'IA Appliquée à l'Administration Publique
+                    et aux Entreprises
+                </li>
+            </ol>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SIX PÔLES
+========================================================= -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>07</span>
+            <h2>Les six pôles de formation</h2>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table class="poles-table">
+
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Pôle</th>
+                        <th>Positionnement</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Mathématiques</td>
+                        <td>Modéliser et résoudre les problèmes</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Statistique & Économétrie</td>
+                        <td>Analyser les données</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Informatique</td>
+                        <td>Construire les solutions</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Comptabilité & Gestion</td>
+                        <td>Gérer les organisations</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Langues</td>
+                        <td>Communiquer et travailler efficacement</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Recherche, Innovation & IA</td>
+                        <td>Innover et transformer</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     POURQUOI CHOISIR LE CREMI
+========================================================= -->
+
+<section class="content-section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>08</span>
+            <h2>Pourquoi choisir le CREMI ?</h2>
+        </div>
+
+        <div class="advantages-grid">
+
+            <div>✓ Formateurs qualifiés et expérimentés</div>
+
+            <div>✓ Approche pratique et professionnelle</div>
+
+            <div>✓ Certificats et diplômes reconnus par le Centre</div>
+
+            <div>✓ Accompagnement personnalisé</div>
+
+            <div>✓ Horaires flexibles</div>
+
+            <div>✓ Formation en présentiel et en ligne</div>
+
+            <div>✓ Opportunités de stages et projets</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VALEURS
+========================================================= -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>09</span>
+            <h2>Nos valeurs</h2>
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-box">
+                <strong>01</strong>
+                <h3>L'Excellence</h3>
+            </div>
+
+            <div class="value-box">
+                <strong>02</strong>
+                <h3>La Discipline</h3>
+            </div>
+
+            <div class="value-box">
+                <strong>03</strong>
+                <h3>Le Professionnalisme</h3>
+            </div>
+
+            <div class="value-box">
+                <strong>04</strong>
+                <h3>L'Intégrité</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PARTENAIRES
+========================================================= -->
+
+<section class="content-section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>10</span>
+            <h2>Nos partenaires</h2>
+        </div>
+
+        <div class="partners-list">
+
+            <article class="partner-card">
+
+                <h3>Les enseignants des universités</h3>
+
+                <p>
+                    Collaboration avec des enseignants et professionnels
+                    issus du monde universitaire.
+                </p>
+
+            </article>
+
+
+            <article class="partner-card">
+
+                <h3>
+                    Les chercheurs nationaux et internationaux
+                </h3>
+
+                <p>
+                    Chercheurs de l'Université de PADOVA
+                    <strong>(UNIPD)</strong> à Padoue, en Italie.
+                </p>
+
+                <p>
+                    Chercheurs de l'Institut Supérieur de Statistique
+                    <strong>(ISS-Lubumbashi)</strong> de Lubumbashi - RDC.
+                </p>
+
+            </article>
+
+
+            <article class="partner-card">
+
+                <h3>MAKE IT FOR YOU</h3>
+
+                <p>
+                    Bruxelles / Belgique — Structure de formation
+                    internationale.
+                </p>
+
+            </article>
+
+
+            <article class="partner-card">
+
+                <h3>EDUCTAR</h3>
+
+                <p>
+                    Kinshasa — Encadrement qualifié à domicile
+                    des élèves et étudiants.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OFFRES DE PRIX
+========================================================= -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>11</span>
+            <h2>Nos offres de prix</h2>
+        </div>
+
+        <div class="price-card">
+
+            <div class="price-value">
+                <span>À partir de</span>
+                <strong>100$</strong>
+                <small>USD HT / jour / participant</small>
+            </div>
+
+            <div class="price-description">
+
+                <p>
+                    Le tarif de nos modules de formation s'élève à
+                    <strong>100$ USD HT par jour et par participant</strong>,
+                    hors frais de déplacement et d'hébergement pour
+                    les interventions à l'étranger.
+                </p>
+
+                <p>
+                    Toutefois, des aménagements sur mesure peuvent
+                    être étudiés sur demande.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUITS
+========================================================= -->
+
+<section class="content-section light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>12</span>
+            <h2>Nos produits de vente</h2>
+        </div>
+
+        <div class="products-grid">
+
+            <div class="product-item">
+                <span>01</span>
+                <p>
+                    Ordinateurs Laptop neufs, reconditionnés
+                    et d'occasion avec garantie
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>02</span>
+                <p>
+                    Tablettes et smartphones neufs avec garantie
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>03</span>
+                <p>
+                    Matériels informatiques : disques durs,
+                    flash disks, souris, etc.
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>04</span>
+                <p>
+                    Smart Watches de qualité
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>05</span>
+                <p>
+                    Powerbanks
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>06</span>
+                <p>
+                    Sacs d'ordinateur
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>07</span>
+                <p>
+                    Baffles musique de qualité
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>08</span>
+                <p>
+                    Accessoires ordinateurs et téléphones
+                </p>
+            </div>
+
+            <div class="product-item">
+                <span>09</span>
+                <p>
+                    Divers
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="contact-title">
+
+                <span>13</span>
+
+                <h2>
+                    Nos contacts
+                </h2>
+
+                <p>
+                    Pour toute information concernant les formations,
+                    les services, les publications ou les partenariats,
+                    contactez le CREMI.
+                </p>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <a href="tel:+243818153136">
+                    📞 +243 818 153 136
+                </a>
+
+                <a href="tel:+243993734678">
+                    📞 +243 99 373 4678
+                </a>
+
+                <a href="tel:+243985493746">
+                    📞 +243 98 549 3746
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="director-signature">
+
+            <span>
+                Le Directeur Général – CREMI-RDC
+            </span>
+
+            <h3>
+                M. NKULU KATEBA Michel Caleb
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="about-footer">
+
+    <div class="container">
+
+        <p>
+            © <span id="currentYear"></span>
+            CREMI — Centre de Recherche en Mathématiques et en Informatique.
+            Tous droits réservés.
+        </p>
+
+        <a href="index.html">
+            ← Retour au site principal
+        </a>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    const year = document.getElementById("currentYear");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+</script>
+
+</body>
+</html>

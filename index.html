@@ -1,0 +1,6102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="CREMI - Centre de Recherche en Mathématiques et en Informatique">
+
+    <meta name="author"
+          content="CREMI">
+
+    <meta name="theme-color"
+          content="#061b3a">
+
+    <title>CREMI | Recherche • Mathématiques • Informatique</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* =========================================================
+   CREMI
+   DESIGN INSTITUTIONNEL PREMIUM
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --blue: #0876e8;
+    --blue-dark: #0754ad;
+    --blue-deep: #031b3a;
+    --blue-light: #edf6ff;
+
+    --cyan: #20c9f3;
+
+    --green: #16a85b;
+    --green-dark: #108c4b;
+
+    --white: #ffffff;
+    --light: #f5f8fc;
+    --light-blue: #f1f7fd;
+
+    --text: #17243a;
+    --muted: #66758b;
+
+    --border: #e2ebf5;
+
+    --shadow:
+        0 20px 60px rgba(3, 47, 96, .10);
+
+    --shadow-hover:
+        0 25px 70px rgba(3, 47, 96, .17);
+
+    --radius: 20px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Inter,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background: var(--white);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+::selection {
+    background: var(--blue);
+    color: white;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(255,255,255,.90);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    border-bottom:
+        1px solid rgba(3,48,96,.07);
+
+    transition:
+        .35s ease;
+
+}
+
+.header.scrolled {
+
+    background:
+        rgba(255,255,255,.97);
+
+    box-shadow:
+        0 12px 40px rgba(2,35,75,.10);
+
+}
+
+
+/* =========================================================
+   NAV CONTAINER
+========================================================= */
+
+.nav-container {
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    flex-shrink: 0;
+
+}
+
+.logo-image {
+
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 3px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        0 8px 20px rgba(3,60,120,.08);
+
+}
+
+.logo-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 9px;
+
+}
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.logo-text strong {
+
+    color: var(--blue-deep);
+
+    font-size: 1.25rem;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -.5px;
+
+}
+
+.logo-text span {
+
+    color: var(--muted);
+
+    font-size: .58rem;
+
+    margin-top: 6px;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+}
+
+.nav-link {
+
+    position: relative;
+
+    color: #3c4a5f;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    padding: 8px 0;
+
+    transition: .3s ease;
+
+}
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--cyan)
+        );
+
+    border-radius: 5px;
+
+    transition: .3s ease;
+
+}
+
+.nav-link:hover,
+.nav-link.active {
+
+    color: var(--blue);
+
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   NAV CONTACT
+========================================================= */
+
+.nav-contact {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background:
+        var(--green);
+
+    color: white;
+
+    padding: 11px 17px;
+
+    border-radius: 11px;
+
+    font-size: .78rem;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px rgba(22,168,91,.20);
+
+    transition: .3s ease;
+
+}
+
+.nav-contact:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        var(--green-dark);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        var(--blue);
+
+    color: white;
+
+    font-size: 1.15rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.menu-toggle:hover {
+
+    background:
+        var(--blue-dark);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+
+    display: none;
+
+    padding: 15px 4% 25px;
+
+    background: white;
+
+    border-top:
+        1px solid var(--border);
+
+    box-shadow:
+        0 20px 35px rgba(0,0,0,.08);
+
+}
+
+.mobile-menu a {
+
+    display: block;
+
+    padding: 13px 5px;
+
+    border-bottom:
+        1px solid var(--border);
+
+    color: var(--text);
+
+    font-weight: 700;
+
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-contact {
+
+    margin-top: 12px;
+
+    border: none !important;
+
+    border-radius: 11px;
+
+    text-align: center;
+
+    color: white !important;
+
+    background:
+        var(--green);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 820px;
+
+    padding:
+        155px 0 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(32,201,243,.20),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(8,118,232,.20),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #02172f 0%,
+            #062f62 48%,
+            #0876e8 100%
+        );
+
+}
+
+
+/* grille */
+
+.hero-grid-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .16;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.08) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        50px 50px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+
+}
+
+
+/* lumières */
+
+.hero-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(5px);
+
+    pointer-events: none;
+
+}
+
+.hero-glow-1 {
+
+    width: 500px;
+    height: 500px;
+
+    right: -200px;
+    top: 80px;
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+        0 0 120px rgba(32,201,243,.15);
+
+}
+
+.hero-glow-2 {
+
+    width: 280px;
+    height: 280px;
+
+    left: -150px;
+    bottom: -80px;
+
+    background:
+        rgba(32,201,243,.06);
+
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 13px;
+
+    border:
+        1px solid rgba(255,255,255,.17);
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-radius: 50px;
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+}
+
+.badge-dot {
+
+    width: 8px;
+    height: 8px;
+
+    background:
+        #55e1ff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px #55e1ff;
+
+}
+
+.hero-mini-title {
+
+    color:
+        #60dfff;
+
+    font-size: .72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+.hero h1 {
+
+    max-width: 720px;
+
+    font-size:
+        clamp(2.8rem, 5vw, 4.7rem);
+
+    line-height: 1.04;
+
+    letter-spacing: -2.5px;
+
+    margin-bottom: 25px;
+
+}
+
+.hero h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #54dfff,
+            #8ae9ff
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+.hero-description {
+
+    max-width: 650px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size:
+        1rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 32px;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 50px;
+
+    padding: 0 20px;
+
+    border-radius: 11px;
+
+    font-size: .82rem;
+
+    font-weight: 800;
+
+    transition:
+        .3s ease;
+
+}
+
+.btn-primary {
+
+    background:
+        white;
+
+    color:
+        var(--blue-deep);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.btn-primary:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.btn-whatsapp {
+
+    background:
+        var(--green);
+
+    color: white;
+
+    box-shadow:
+        0 15px 30px rgba(22,168,91,.20);
+
+}
+
+.btn-whatsapp:hover {
+
+    background:
+        var(--green-dark);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.hero-stats {
+
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 55px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,.13);
+
+}
+
+.stat strong {
+
+    display: block;
+
+    color: white;
+
+    font-size: 1.65rem;
+
+    line-height: 1;
+
+    margin-bottom: 6px;
+
+}
+
+.stat span {
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: .67rem;
+
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.hero-logo-card {
+
+    position: relative;
+
+    width: min(430px, 100%);
+
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,255,255,.18);
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.03)
+        );
+
+    backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.25);
+
+    overflow: hidden;
+
+}
+
+.hero-logo-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 75%;
+
+    height: 75%;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    border-radius: 50%;
+
+}
+
+.hero-logo-card img {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 58%;
+
+    height: 58%;
+
+    object-fit: contain;
+
+    border-radius: 25px;
+
+    filter:
+        drop-shadow(
+            0 20px 35px rgba(0,0,0,.25)
+        );
+
+}
+
+.hero-logo-label {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    z-index: 3;
+
+}
+
+.hero-logo-label span {
+
+    display: block;
+
+    font-weight: 900;
+
+    font-size: .95rem;
+
+}
+
+.hero-logo-label small {
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: .62rem;
+
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.floating-card {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 16px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    color: var(--text);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.20);
+
+    animation:
+        floatCard 4s ease-in-out infinite;
+
+}
+
+.floating-card strong,
+.floating-card span {
+
+    display: block;
+
+}
+
+.floating-card strong {
+
+    font-size: .78rem;
+
+}
+
+.floating-card span {
+
+    color: var(--muted);
+
+    font-size: .62rem;
+
+}
+
+.floating-card-1 {
+
+    left: -25px;
+
+    top: 95px;
+
+}
+
+.floating-card-2 {
+
+    right: -20px;
+
+    bottom: 80px;
+
+    animation-delay:
+        -2s;
+
+}
+
+.floating-icon {
+
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+}
+
+.blue-icon {
+
+    background:
+        var(--blue-light);
+
+    color:
+        var(--blue);
+
+}
+
+.cyan-icon {
+
+    background:
+        #e9fbff;
+
+    color:
+        #08a9d3;
+
+}
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+
+    padding:
+        110px 0;
+
+}
+
+.section-heading {
+
+    max-width: 750px;
+
+    margin-bottom: 55px;
+
+}
+
+.section-heading.center {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+}
+
+.section-label {
+
+    display: inline-block;
+
+    color:
+        var(--blue);
+
+    font-size: .69rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 9px;
+
+}
+
+.section-heading h2 {
+
+    color:
+        var(--blue-deep);
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 16px;
+
+}
+
+.section-heading h2 span {
+
+    color:
+        var(--blue);
+
+}
+
+.section-heading p {
+
+    color:
+        var(--muted);
+
+    font-size: .9rem;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+
+    background:
+        white;
+
+}
+
+
+/* =========================================================
+   DIRECTOR PROFILE
+========================================================= */
+
+.director-profile {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        360px 1fr;
+
+    gap: 65px;
+
+    align-items: center;
+
+    padding: 45px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 28px;
+
+    box-shadow:
+        var(--shadow);
+
+    overflow: hidden;
+
+}
+
+.director-profile::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 6px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--cyan)
+        );
+
+}
+
+
+/* =========================================================
+   DIRECTOR PHOTO
+========================================================= */
+
+.director-photo {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.director-photo-frame {
+
+    position: relative;
+
+    width: min(330px, 100%);
+
+    padding: 9px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--cyan)
+        );
+
+    box-shadow:
+        0 25px 55px rgba(8,102,214,.20);
+
+}
+
+.director-photo-frame img {
+
+    width: 100%;
+
+    height: 390px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 18px;
+
+    background:
+        #edf5fc;
+
+}
+
+.director-photo-top {
+
+    position: absolute;
+
+    top: 22px;
+    left: 23px;
+
+    z-index: 2;
+
+    padding: 6px 10px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(3,27,58,.85);
+
+    color: white;
+
+    font-size: .6rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+.director-photo-badge {
+
+    position: absolute;
+
+    left: 24px;
+    bottom: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(3,27,58,.92);
+
+    color: white;
+
+    font-size: .67rem;
+
+    font-weight: 800;
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+/* =========================================================
+   DIRECTOR TEXT
+========================================================= */
+
+.director-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--blue);
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+.director-content h3 {
+
+    color:
+        var(--blue-deep);
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 17px;
+
+}
+
+.director-content h3 span {
+
+    display: block;
+
+    color:
+        var(--blue);
+
+    font-size: .55em;
+
+    margin-top: 8px;
+
+}
+
+.director-intro {
+
+    max-width: 760px;
+
+    color:
+        var(--muted);
+
+    font-size: .88rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   DIRECTOR ACHIEVEMENTS
+========================================================= */
+
+.director-achievements {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+}
+
+.director-achievement {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 14px;
+
+    background:
+        #f8fbff;
+
+    border:
+        1px solid #e5edf6;
+
+    border-radius: 13px;
+
+    transition:
+        .3s ease;
+
+}
+
+.director-achievement:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #b9d9f8;
+
+    background:
+        #f2f8ff;
+
+    box-shadow:
+        0 12px 25px rgba(8,102,214,.07);
+
+}
+
+.achievement-icon {
+
+    width: 37px;
+    height: 37px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background:
+        var(--blue-light);
+
+    color:
+        var(--blue);
+
+    font-size: .78rem;
+
+}
+
+.director-achievement strong {
+
+    display: block;
+
+    color:
+        var(--blue-deep);
+
+    font-size: .73rem;
+
+    line-height: 1.4;
+
+    margin-bottom: 3px;
+
+}
+
+.director-achievement p {
+
+    color:
+        #738197;
+
+    font-size: .63rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   DIRECTOR STATUS
+========================================================= */
+
+.director-status {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid #e8eef5;
+
+}
+
+.director-status span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 11px;
+
+    border-radius: 50px;
+
+    background:
+        #edf6ff;
+
+    color:
+        var(--blue-dark);
+
+    font-size: .63rem;
+
+    font-weight: 800;
+
+}
+
+.director-status i {
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   ORGANIGRAMME CONTAINER
+========================================================= */
+
+.organization-wrapper {
+
+    margin-top: 100px;
+
+    padding: 65px 45px 45px;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(8,102,214,.08),
+            transparent 24%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(32,201,243,.08),
+            transparent 24%
+        ),
+
+        #f7faff;
+
+    border:
+        1px solid #e0eaf4;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 70px rgba(2,40,90,.07);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   ORGANISATION TITLE
+========================================================= */
+
+.organization-heading {
+
+    max-width: 700px;
+
+    text-align: center;
+
+    margin:
+        0 auto 60px;
+
+}
+
+.organization-heading h2 {
+
+    color:
+        var(--blue-deep);
+
+    font-size:
+        clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.15;
+
+    margin: 7px 0 13px;
+
+}
+
+.organization-heading h2 span {
+
+    color:
+        var(--blue);
+
+}
+
+.organization-heading p {
+
+    color:
+        var(--muted);
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================================
+   ORGANIGRAMME
+========================================================= */
+
+.org-tree {
+
+    position: relative;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   DG
+========================================================= */
+
+.org-top {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.org-dg {
+
+    position: relative;
+
+    min-width: 310px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 23px;
+
+    text-align: left;
+
+    color: white;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #031b3a,
+            #0759b2
+        );
+
+    box-shadow:
+        0 20px 45px rgba(3,27,58,.20);
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+}
+
+.org-dg-icon {
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,.11);
+
+    color:
+        #62ddff;
+
+    font-size: 1.25rem;
+
+}
+
+.org-dg span {
+
+    display: block;
+
+    color:
+        #62ddff;
+
+    font-size: .57rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+}
+
+.org-dg h3 {
+
+    font-size: 1rem;
+
+    margin: 2px 0;
+
+}
+
+.org-dg p {
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size: .65rem;
+
+}
+
+
+/* =========================================================
+   CONNECTEURS
+========================================================= */
+
+.org-main-connector {
+
+    width: 2px;
+
+    height: 45px;
+
+    margin: auto;
+
+    background:
+        linear-gradient(
+            180deg,
+            #123b6b,
+            var(--blue)
+        );
+
+}
+
+.org-horizontal-line {
+
+    position: relative;
+
+    width:
+        calc(100% - 14%);
+
+    height: 2px;
+
+    margin: 0 auto;
+
+    background:
+        #bcd1e7;
+
+}
+
+
+/* =========================================================
+   DIRECTIONS
+========================================================= */
+
+.org-directions {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(170px, 1fr));
+
+    gap: 14px;
+
+}
+
+.org-direction {
+
+    position: relative;
+
+    margin-top: 30px;
+
+    background:
+        white;
+
+    border:
+        1px solid #dce7f2;
+
+    border-radius: 17px;
+
+    overflow: visible;
+
+    text-align: left;
+
+    box-shadow:
+        0 12px 35px rgba(2,40,90,.06);
+
+    transition:
+        .35s ease;
+
+}
+
+.org-direction:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #a9cff2;
+
+    box-shadow:
+        0 22px 50px rgba(8,102,214,.13);
+
+}
+
+
+/* connecteur direction */
+
+.org-connector {
+
+    position: absolute;
+
+    top: -30px;
+
+    left: 50%;
+
+    width: 2px;
+    height: 30px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        #bcd1e7;
+
+}
+
+
+/* =========================================================
+   HEADER DIRECTION
+========================================================= */
+
+.org-direction-header {
+
+    min-height: 135px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 18px 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf6ff,
+            #ffffff
+        );
+
+    border-bottom:
+        1px solid #e3edf7;
+
+    border-radius:
+        17px 17px 0 0;
+
+}
+
+.org-direction-icon {
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--cyan)
+        );
+
+    box-shadow:
+        0 8px 20px rgba(8,102,214,.18);
+
+}
+
+.org-direction-header small {
+
+    display: block;
+
+    color:
+        var(--blue);
+
+    font-size: .58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 4px;
+
+}
+
+.org-direction-header h3 {
+
+    color:
+        var(--blue-deep);
+
+    font-size: .77rem;
+
+    line-height: 1.45;
+
+}
+
+
+/* =========================================================
+   DÉPARTEMENTS
+========================================================= */
+
+.org-departments {
+
+    display: grid;
+
+    gap: 8px;
+
+    padding: 13px;
+
+}
+
+.org-department {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    padding: 9px;
+
+    border-radius: 9px;
+
+    background:
+        #f8fafc;
+
+    border:
+        1px solid #edf2f7;
+
+    transition:
+        .25s ease;
+
+}
+
+.org-department:hover {
+
+    background:
+        #eef7ff;
+
+    border-color:
+        #d4e7fa;
+
+}
+
+.org-department i {
+
+    flex-shrink: 0;
+
+    color:
+        var(--blue);
+
+    font-size: .65rem;
+
+    margin-top: 3px;
+
+}
+
+.org-department span {
+
+    color:
+        #526277;
+
+    font-size: .61rem;
+
+    line-height: 1.45;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   LÉGENDE
+========================================================= */
+
+.org-legend {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 45px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #dce7f2;
+
+}
+
+.org-legend div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        #718096;
+
+    font-size: .65rem;
+
+    font-weight: 700;
+
+}
+
+.legend-dot {
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+}
+
+.dot-dg {
+    background: var(--blue-deep);
+}
+
+.dot-direction {
+    background: var(--blue);
+}
+
+.dot-department {
+    background: var(--cyan);
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.team {
+
+    background:
+        white;
+
+}
+
+.team-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+.team-card {
+
+    overflow: hidden;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(2,40,90,.045);
+
+    transition:
+        .35s ease;
+
+}
+
+.team-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--shadow-hover);
+
+}
+
+.team-photo {
+
+    position: relative;
+
+    height: 260px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf4ff,
+            #d9edff
+        );
+
+}
+
+.team-photo::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(2,27,58,.18),
+            transparent 45%
+        );
+
+    pointer-events: none;
+
+}
+
+.team-photo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        .5s ease;
+
+}
+
+.team-card:hover
+.team-photo img {
+
+    transform:
+        scale(1.06);
+
+}
+
+.team-info {
+
+    padding:
+        19px;
+
+}
+
+.team-info span {
+
+    color:
+        var(--blue);
+
+    font-size: .62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+.team-info h3 {
+
+    color:
+        var(--blue-deep);
+
+    font-size: .95rem;
+
+    margin:
+        5px 0 4px;
+
+}
+
+.team-info p {
+
+    color:
+        var(--muted);
+
+    font-size: .72rem;
+
+}
+
+
+/* =========================================================
+   FORMATIONS
+========================================================= */
+
+.formations {
+
+    background:
+        var(--light);
+
+}
+
+.cards-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+.service-card {
+
+    position: relative;
+
+    padding: 30px;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        .35s ease;
+
+}
+
+.service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--blue),
+            var(--cyan)
+        );
+
+    transition:
+        .35s ease;
+
+}
+
+.service-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+.service-card:hover::before {
+
+    height: 100%;
+
+}
+
+.service-icon {
+
+    width: 54px;
+    height: 54px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    background:
+        var(--blue-light);
+
+    color:
+        var(--blue);
+
+    font-size: 1.15rem;
+
+    margin-bottom: 20px;
+
+}
+
+.service-card h3 {
+
+    color:
+        var(--blue-deep);
+
+    font-size: 1rem;
+
+    margin-bottom: 9px;
+
+}
+
+.service-card p {
+
+    color:
+        var(--muted);
+
+    font-size: .78rem;
+
+}
+
+.card-arrow {
+
+    display: block;
+
+    color:
+        var(--blue);
+
+    margin-top: 18px;
+
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services {
+
+    background:
+        white;
+
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+.service-box {
+
+    position: relative;
+
+    padding: 30px;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    transition:
+        .35s ease;
+
+}
+
+.service-box:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #b8d8f7;
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+.service-box-icon {
+
+    width: 53px;
+    height: 53px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background:
+        var(--blue-light);
+
+    color:
+        var(--blue);
+
+    font-size: 1.15rem;
+
+    margin-bottom: 20px;
+
+}
+
+.service-box h3 {
+
+    color:
+        var(--blue-deep);
+
+    font-size: .98rem;
+
+    margin-bottom: 9px;
+
+}
+
+.service-box p {
+
+    color:
+        var(--muted);
+
+    font-size: .78rem;
+
+}
+
+
+/* =========================================================
+   NEWS
+========================================================= */
+
+.news {
+
+
+    background:
+        var(--blue-deep);
+
+}
+
+.news-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+.news-card {
+
+    overflow: hidden;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    transition:
+        .35s ease;
+
+}
+
+.news-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+.news-image {
+
+    position: relative;
+
+    height: 220px;
+
+    overflow: hidden;
+
+}
+
+.news-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        .5s ease;
+
+}
+
+.news-card:hover
+.news-image img {
+
+    transform:
+        scale(1.06);
+
+}
+
+.news-image span {
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 6px 10px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(3,27,58,.88);
+
+    color: white;
+
+    font-size: .58rem;
+
+    font-weight: 800;
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+.news-content {
+
+    padding:
+        21px;
+
+}
+
+.news-content small {
+
+    color:
+        var(--blue);
+
+    font-size: .58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+.news-content h3 {
+
+    color:
+        var(--blue-deep);
+
+    font-size: 1rem;
+
+    margin:
+        6px 0 7px;
+
+}
+
+.news-content p {
+
+    color:
+        var(--muted);
+
+    font-size: .75rem;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+
+    padding:
+        100px 0;
+
+    background:
+        white;
+
+}
+
+.contact-box {
+
+    position: relative;
+
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        65px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(32,201,243,.25),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #02172f,
+            #0759b2,
+            #087ee5
+        );
+
+    box-shadow:
+        0 25px 70px rgba(4,70,145,.18);
+
+}
+
+.contact-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 650px;
+
+}
+
+.section-label.light {
+
+    color:
+        #62ddff;
+
+}
+
+.contact-content h2 {
+
+    font-size:
+        clamp(2.3rem, 5vw, 3.6rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+    margin:
+        8px 0 18px;
+
+}
+
+.contact-content h2 span {
+
+    color:
+        #64dcff;
+
+}
+
+.contact-content p {
+
+    color:
+        rgba(255,255,255,.70);
+
+    font-size: .86rem;
+
+    margin-bottom: 7px;
+
+}
+
+.big-whatsapp {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 23px;
+
+    padding:
+        15px 19px;
+
+    border-radius: 13px;
+
+    background:
+        var(--green);
+
+    color: white;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.18);
+
+    transition:
+        .3s ease;
+
+}
+
+.big-whatsapp:hover {
+
+    transform:
+        translateY(-4px);
+
+    background:
+        var(--green-dark);
+
+}
+
+.big-whatsapp > i:first-child {
+
+    font-size: 1.9rem;
+
+}
+
+.big-whatsapp span {
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: .85rem;
+
+    font-weight: 900;
+
+}
+
+.big-whatsapp small {
+
+    font-size: .55rem;
+
+    letter-spacing: 1px;
+
+    opacity: .72;
+
+}
+
+
+/* =========================================================
+   CONTACT DECORATION
+========================================================= */
+
+.contact-decoration {
+
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 45%;
+    height: 100%;
+
+    pointer-events: none;
+
+}
+
+.contact-circle {
+
+    position: absolute;
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    border-radius: 50%;
+
+}
+
+.circle-1 {
+
+    width: 500px;
+    height: 500px;
+
+    right: -230px;
+    top: -160px;
+
+}
+
+.circle-2 {
+
+    width: 300px;
+    height: 300px;
+
+    right: 40px;
+    bottom: -180px;
+
+}
+
+.circle-3 {
+
+    width: 170px;
+    height: 170px;
+
+    right: 190px;
+    top: 80px;
+
+}
+
+.contact-decoration > i {
+
+    position: absolute;
+
+    right: 20%;
+    top: 34%;
+
+    color:
+        rgba(255,255,255,.08);
+
+    font-size:
+        8rem;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    padding-top:
+        65px;
+
+    color:
+        white;
+
+    background:
+        #02172f;
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 55px;
+
+    padding-bottom:
+        50px;
+
+}
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+
+}
+
+.footer-logo-image {
+
+    width: 46px;
+    height: 46px;
+
+    padding: 3px;
+
+    background: white;
+
+    border-radius: 9px;
+
+}
+
+.footer-logo-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+
+}
+
+.footer-logo strong {
+
+    display: block;
+
+    font-size: 1.2rem;
+
+}
+
+.footer-logo span {
+
+    display: block;
+
+    color:
+        #8da8c8;
+
+    font-size: .62rem;
+
+}
+
+.footer-brand p {
+
+    max-width: 400px;
+
+    color:
+        #8da8c8;
+
+    font-size: .78rem;
+
+}
+
+.footer h3 {
+
+    font-size: .88rem;
+
+    margin-bottom: 17px;
+
+}
+
+.footer-links a {
+
+    display: block;
+
+    color:
+        #8da8c8;
+
+    font-size: .76rem;
+
+    margin-bottom: 8px;
+
+    transition:
+        .3s ease;
+
+}
+
+.footer-links a:hover {
+
+    color: white;
+
+    transform:
+        translateX(4px);
+
+}
+
+.footer-contact a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        #54d8a0;
+
+    font-size: .8rem;
+
+    font-weight: 800;
+
+    margin-bottom: 14px;
+
+}
+
+.footer-contact p {
+
+    color:
+        #8da8c8;
+
+    font-size: .73rem;
+
+}
+
+.footer-contact p i {
+
+    margin-right: 5px;
+
+}
+
+.footer-bottom {
+
+    width:
+        min(1200px, 92%);
+
+    margin:
+        auto;
+
+    padding:
+        20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    color:
+        #718bab;
+
+    font-size: .64rem;
+
+}
+
+
+/* =========================================================
+   WHATSAPP FLOTTANT
+========================================================= */
+
+.whatsapp-floating {
+
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 900;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        12px 17px;
+
+    border-radius: 50px;
+
+    background:
+        var(--green);
+
+    color: white;
+
+    font-size: .73rem;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 12px 30px rgba(22,168,91,.30);
+
+    animation:
+        whatsappPulse 2.3s infinite;
+
+}
+
+.whatsapp-floating:hover {
+
+    background:
+        var(--green-dark);
+
+    transform:
+        translateY(-3px);
+
+}
+
+.whatsapp-floating i {
+
+    font-size:
+        1.3rem;
+
+}
+
+@keyframes whatsappPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 12px 30px rgba(22,168,91,.30);
+    }
+
+    50% {
+        box-shadow:
+            0 12px 40px rgba(22,168,91,.55);
+    }
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 82px;
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        var(--blue);
+
+    color: white;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        .3s ease;
+
+    z-index: 899;
+
+}
+
+.back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.reveal {
+
+    opacity: 1;
+
+    transform: none;
+
+}
+
+.js-enabled .reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+.js-enabled .reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: .74rem;
+    }
+
+    .nav-contact {
+        padding: 10px 13px;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+
+    .team-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .organization-wrapper {
+        overflow-x: auto;
+    }
+
+    .org-tree {
+        min-width: 1050px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+    }
+
+    .hero {
+
+        min-height: auto;
+
+        padding:
+            135px 0 70px;
+
+    }
+
+    .hero-content {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 50px;
+
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 450px;
+    }
+
+    .director-profile {
+
+        grid-template-columns:
+            1fr;
+
+        text-align: center;
+
+        gap: 40px;
+
+    }
+
+    .director-photo-frame {
+        margin: auto;
+    }
+
+    .director-achievements {
+        text-align: left;
+    }
+
+    .director-status {
+        justify-content: center;
+    }
+
+    .team-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(94%, 1200px);
+    }
+
+    .section {
+        padding:
+            75px 0;
+    }
+
+    .logo-text span {
+        display: none;
+    }
+
+    .logo-image {
+        width: 43px;
+        height: 43px;
+    }
+
+    .hero {
+        padding-top:
+            120px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            2.35rem;
+
+        letter-spacing:
+            -1px;
+
+    }
+
+    .hero-description {
+        font-size: .85rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-visual {
+        min-height: 380px;
+    }
+
+    .hero-logo-card {
+        width: 300px;
+    }
+
+    .floating-card {
+        transform: scale(.85);
+    }
+
+    .floating-card-1 {
+        left: -5px;
+        top: 45px;
+    }
+
+    .floating-card-2 {
+        right: -5px;
+        bottom: 40px;
+    }
+
+    .hero-stats {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+
+    }
+
+    .stat strong {
+        font-size: 1.35rem;
+    }
+
+    .stat span {
+        font-size: .57rem;
+    }
+
+    .section-heading h2 {
+        font-size:
+            2rem;
+    }
+
+    .director-profile {
+
+        padding:
+            25px 17px;
+
+        border-radius:
+            22px;
+
+    }
+
+    .director-photo-frame {
+        max-width: 275px;
+    }
+
+    .director-photo-frame img {
+        height: 330px;
+    }
+
+    .director-achievements {
+        grid-template-columns: 1fr;
+    }
+
+    .director-content h3 {
+        font-size: 1.9rem;
+    }
+
+    .director-status {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .director-status span {
+        justify-content: center;
+    }
+
+    .organization-wrapper {
+
+        margin-top:
+            70px;
+
+        padding:
+            40px 15px;
+
+        border-radius:
+            23px;
+
+    }
+
+    .org-tree {
+        min-width: 950px;
+    }
+
+    .team-grid,
+    .cards-grid,
+    .services-grid,
+    .news-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .team-photo {
+        height: 310px;
+    }
+
+    .contact-section {
+        padding: 70px 0;
+    }
+
+    .contact-box {
+
+        padding:
+            40px 24px;
+
+        min-height:
+            450px;
+
+    }
+
+    .contact-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .big-whatsapp {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+    }
+
+    .whatsapp-floating {
+
+        width: 54px;
+        height: 54px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        right: 15px;
+        bottom: 15px;
+
+    }
+
+    .whatsapp-floating span {
+        display: none;
+    }
+
+    .back-to-top {
+
+        right: 15px;
+        bottom: 78px;
+
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+    }
+
+}
+.more-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #0b5ed7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.more-link:hover {
+    background: #084298;
+    transform: translateY(-2px);
+}
+</style>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="#accueil" class="logo">
+
+            <div class="logo-image">
+                <img src="Logo.JPEG" alt="Logo officiel du CREMI">
+            </div>
+
+            <div class="logo-text">
+
+                <strong>CREMI</strong>
+
+                <span>
+                    Recherche • Mathématiques • Informatique
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- Navigation desktop -->
+
+        <nav class="navbar" aria-label="Navigation principale">
+
+            <a href="#accueil" class="nav-link active">
+                Accueil
+            </a>
+
+            <a href="#apropos" class="nav-link">
+                À propos
+            </a>
+
+            <a href="#organisation" class="nav-link">
+                Organisation
+            </a>
+
+            <a href="#equipe" class="nav-link">
+                Équipe
+            </a>
+
+            <a href="#formations" class="nav-link">
+                Formations
+            </a>
+
+            <a href="#services" class="nav-link">
+                Services
+            </a>
+
+            <a href="#actualites" class="nav-link">
+                Actualités
+            </a>
+
+            <a href="#contact" class="nav-contact">
+                <i class="fa-brands fa-whatsapp"></i>
+                Contact
+            </a>
+            <a href="apropos.html" class="more-link">
+                En savoir plus →
+            </a>
+
+        </nav>
+
+
+        <!-- Bouton mobile -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+
+    <!-- Navigation mobile -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#accueil">Accueil</a>
+
+        <a href="#apropos">À propos</a>
+
+        <a href="#organisation">Organisation</a>
+
+        <a href="#equipe">Équipe</a>
+
+        <a href="#formations">Formations</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#actualites">Actualités</a>
+
+        <a href="#contact" class="mobile-contact">
+            <i class="fa-brands fa-whatsapp"></i>
+            Contactez-nous
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="accueil">
+
+    <div class="hero-grid-pattern"></div>
+
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-text reveal">
+
+            <div class="hero-badge">
+
+                <span class="badge-dot"></span>
+
+                <span>
+                    Innovation • Recherche • Excellence
+                </span>
+
+            </div>
+
+
+            <p class="hero-mini-title">
+                CENTRE DE RECHERCHE
+            </p>
+
+
+            <h1>
+                Centre de Recherche en
+                <span>Mathématiques</span>
+                 et en <span>Informatique</span>
+            </h1>
+
+
+            <p class="hero-description">
+
+                Le CREMI œuvre dans les domaines des
+                mathématiques, de l'informatique,
+                de la recherche scientifique, de
+                l'intelligence artificielle et de
+                l'innovation technologique.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#apropos"
+                    class="btn btn-primary"
+                >
+                    Découvrir le CREMI
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+
+                <a
+                    href="https://wa.me/243993734678?text=Bonjour%20CREMI%2C%20je%20souhaite%20avoir%20plus%20d'informations."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Nous contacter
+
+                </a>
+
+            </div>
+
+
+            <!-- Statistiques -->
+
+            <div class="hero-stats">
+
+                <div class="stat">
+
+                    <strong>01</strong>
+
+                    <span>
+                        Centre de recherche
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>05</strong>
+
+                    <span>
+                        Directions
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>100%</strong>
+
+                    <span>
+                        Innovation
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero visuel -->
+
+        <div class="hero-visual reveal">
+
+            <div class="hero-logo-card">
+
+                <div class="hero-logo-glow"></div>
+
+                <img
+                    src="Logo.JPEG"
+                    alt="CREMI"
+                >
+
+                <div class="hero-logo-label">
+
+                    <span>
+                        CREMI
+                    </span>
+
+                    <small>
+                        Science • Technologie • Innovation
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-1">
+
+                <div class="floating-icon blue-icon">
+
+                    <i class="fa-solid fa-microscope"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Recherche
+                    </strong>
+
+                    <span>
+                        Scientifique
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-2">
+
+                <div class="floating-icon cyan-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Innovation
+                    </strong>
+
+                    <span>
+                        Technologique
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     À PROPOS
+========================================================= -->
+
+<section class="section about" id="apropos">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                À PROPOS DU CREMI
+            </span>
+
+            <h2>
+                Une organisation tournée vers
+                <span>l'excellence</span>
+            </h2>
+
+            <p>
+
+                Le Centre de Recherche en Mathématiques et en
+                Informatique (CREMI) s'appuie sur une organisation
+                structurée afin de développer ses activités de
+                recherche, de formation, d'innovation et de
+                développement technologique.
+
+            </p>
+
+        </div>
+
+
+        <!-- Profil DG -->
+
+        <div class="director-profile reveal">
+
+            <div class="director-photo">
+
+                <div class="director-photo-frame">
+
+                    <div class="director-photo-top">
+                        <span>NKULU kateba michel caleb</span>
+                    </div>
+
+                    <img
+                        src="papa.JPEG"
+                        alt="Directeur Général et Fondateur du CREMI"
+                    >
+
+                    <div class="director-photo-badge">
+
+                        <i class="fa-solid fa-crown"></i>
+
+                        <span>
+                            Fondateur du CREMI
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="director-content">
+
+                <span class="director-label">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                    DIRECTION GÉNÉRALE
+
+                </span>
+
+
+                <h3>
+
+                    Directeur Général
+
+                    <span>
+                        & Fondateur du CREMI
+                    </span>
+
+                </h3>
+
+
+                <p class="director-intro">
+
+                    À la tête du CREMI, le Directeur Général
+                    assure l'orientation stratégique, la
+                    coordination générale et le développement
+                    des activités scientifiques, académiques
+                    et professionnelles du Centre.
+
+                </p>
+
+
+                <div class="director-achievements">
+
+                    <!-- 1 -->
+
+                    <article class="director-achievement">
+
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Statisticien
+                            </strong>
+
+                            <p>
+                                Option : Techniques Mathématiques
+                                de Gestion — Lubumbashi.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 2 -->
+
+                    <article class="director-achievement">
+
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Licencié en Management et
+                                Sciences Économiques
+                            </strong>
+
+                            <p>
+                                Option : Gestion Financière et
+                                Comptabilité — Kinshasa.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 3 -->
+
+                    <article class="director-achievement">
+
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                DEA et Doctorant
+                            </strong>
+
+                            <p>
+                                Management et Sciences Économiques.
+                                Management Stratégique et Opérationnel.
+                                Orientation : Management de la Qualité —
+                                Kinshasa.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 4 -->
+
+                    <article class="director-achievement">
+
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Master en Sciences Économiques
+                                et de Gestion
+                            </strong>
+
+                            <p>
+                                Filière : Comptabilité — Contrôle —
+                                Audit — Kinshasa.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 5 -->
+
+                    <article class="director-achievement">
+
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                DIT en Théologie
+                            </strong>
+
+                            <p>
+                                Bibledoc — Stafford, USA.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="director-status">
+
+                    <span>
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        Enseignant des Universités
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-microscope"></i>
+                        Chercheur
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-pen-nib"></i>
+                        Auteur
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ORGANIGRAMME
+        ================================================== -->
+
+        <div
+            class="organization-wrapper reveal"
+            id="organisation"
+        >
+
+            <div class="organization-heading">
+
+                <span class="section-label">
+                    STRUCTURE ORGANISATIONNELLE
+                </span>
+
+                <h2>
+                    Organigramme du
+                    <span>CREMI</span>
+                </h2>
+
+                <p>
+
+                    Une structure hiérarchique organisée autour
+                    d'une Direction Générale et de cinq directions
+                    spécialisées.
+
+                </p>
+
+            </div>
+
+
+            <div class="org-tree">
+
+                <!-- DG -->
+
+                <div class="org-top">
+
+                    <div class="org-dg">
+
+                        <div class="org-dg-icon">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                DIRECTION GÉNÉRALE
+                            </span>
+
+                            <h3>
+                                Directeur Général
+                            </h3>
+
+                            <p>
+                                Fondateur du CREMI
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="org-main-connector"></div>
+
+
+                <!-- Ligne -->
+
+                <div class="org-horizontal-line"></div>
+
+
+                <!-- 5 directions -->
+
+                <div class="org-directions">
+
+
+                    <!-- DIRED -->
+
+                    <article class="org-direction">
+
+                        <div class="org-connector"></div>
+
+                        <div class="org-direction-header">
+
+                            <div class="org-direction-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div>
+
+                                <small>DIRED</small>
+
+                                <h3>
+                                    Direction Informatique,
+                                    Recherche & Développement
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-departments">
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <span>
+                                    Département Informatique
+                                </span>
+                            </div>
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-flask"></i>
+                                <span>
+                                    Département Recherche
+                                    et Développement
+                                </span>
+                            </div>
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-brain"></i>
+                                <span>
+                                    Département Intelligence
+                                    Artificielle (IA)
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DE -->
+
+                    <article class="org-direction">
+
+                        <div class="org-connector"></div>
+
+                        <div class="org-direction-header">
+
+                            <div class="org-direction-icon">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+
+                            <div>
+
+                                <small>DE</small>
+
+                                <h3>
+                                    Direction
+                                    Électronique
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-departments">
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                                <span>
+                                    Département Technique
+                                </span>
+                            </div>
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-memory"></i>
+                                <span>
+                                    Département Hardware
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DS -->
+
+                    <article class="org-direction">
+
+                        <div class="org-connector"></div>
+
+                        <div class="org-direction-header">
+
+                            <div class="org-direction-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+
+                            <div>
+
+                                <small>DS</small>
+
+                                <h3>
+                                    Direction
+                                    Scientifique
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-departments">
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                                <span>
+                                    Département Formation
+                                </span>
+                            </div>
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-language"></i>
+                                <span>
+                                    Département Centre ECS
+                                </span>
+                            </div>
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-book-open"></i>
+                                <span>
+                                    Maison d'Édition CREMI
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DC -->
+
+                    <article class="org-direction">
+
+                        <div class="org-connector"></div>
+
+                        <div class="org-direction-header">
+
+                            <div class="org-direction-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div>
+
+                                <small>DC</small>
+
+                                <h3>
+                                    Direction
+                                    Commerciale
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-departments">
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>
+                                    Département des Ventes
+                                </span>
+                            </div>
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-bullhorn"></i>
+                                <span>
+                                    Département Marketing
+                                </span>
+                            </div>
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <span>
+                                    Gestion des Stocks
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DF -->
+
+                    <article class="org-direction">
+
+                        <div class="org-connector"></div>
+
+                        <div class="org-direction-header">
+
+                            <div class="org-direction-icon">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+
+                            <div>
+
+                                <small>DF</small>
+
+                                <h3>
+                                    Direction
+                                    des Finances
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-departments">
+
+                            <div class="org-department">
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+                                <span>
+                                    Gestion financière
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Légende -->
+
+                <div class="org-legend">
+
+                    <div>
+                        <span class="legend-dot dot-dg"></span>
+                        Direction Générale
+                    </div>
+
+                    <div>
+                        <span class="legend-dot dot-direction"></span>
+                        Direction
+                    </div>
+
+                    <div>
+                        <span class="legend-dot dot-department"></span>
+                        Département
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ÉQUIPE
+========================================================= -->
+
+<section class="section team" id="equipe">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                NOTRE ÉQUIPE
+            </span>
+
+            <h2>
+                Les talents derrière
+                <span>le CREMI</span>
+            </h2>
+
+            <p>
+                Une équipe engagée dans la recherche,
+                l'innovation, la formation et le développement.
+            </p>
+
+        </div>
+
+
+        <div class="team-grid">
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="DG.JPEG" alt="Directeur Général">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Direction Générale</span>
+
+                    <h3>
+                       Nkulu KATEBA michel caleb
+                    </h3>
+
+                    <p>
+                        Direction Générale du CREMI
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="jolas.JPEG" alt="Jolas KATEBA">
+                </div>
+
+                <div class="team-info">
+
+                    <span>DIRED</span>
+
+                    <h3>
+                        Jolas KATEBA
+                    </h3>
+
+                    <p>
+                        Informatique & Développement
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="joans.JPEG" alt="Responsable R&D">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Marketing</span>
+
+                    <h3>
+                        Joans KATEBA
+                    </h3>
+
+                    <p>
+                        Communication & marketing
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="joking.JPEG" alt="Joking NKULU KATEBA">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Intelligence Artificielle</span>
+
+                    <h3>
+                        Joking NKULU KATEBA
+                    </h3>
+
+                    <p>
+                        Intelligence artificielle
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="wigo.JPEG" alt="Wigonli KATEBA">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Électronique</span>
+
+                    <h3>
+                        Wigonli KATEBA
+                    </h3>
+
+                    <p>
+                        Électronique & maintenance
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="ovic.JPEG" alt="Responsable Hardware">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Marketing</span>
+
+                    <h3>
+                        Ovic KATEBA
+                    </h3>
+
+                    <p>
+                        Communication & marketing
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="jonathan.JPEG" alt="Jonathan Pinto">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Formation</span>
+
+                    <h3>
+                        Jonathan Pinto
+                    </h3>
+
+                    <p>
+                        Formation & accompagnement
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="eureka.JPEG" alt="Eurêka MAFUTA">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Marketing</span>
+
+                    <h3>
+                        Eurêka MAFUTA
+                    </h3>
+
+                    <p>
+                        Communication & marketing
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="josn.JPEG" alt="Josn KATEBA">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Finances</span>
+
+                    <h3>
+                        Josn KATEBA
+                    </h3>
+
+                    <p>
+                        Responsable des finances
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="kevin.JPEG" alt="Kévin TSHIKALA">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Commercial</span>
+
+                    <h3>
+                        Kévin TSHIKALA
+                    </h3>
+
+                    <p>
+                        Ventes & développement commercial
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="marie.JPEG" alt="Marie Ruth MUNDEKE">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Marketing</span>
+
+                    <h3>
+                        Marie Ruth MUNDEKE
+                    </h3>
+
+                    <p>
+                        Communication & marketing
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="team-card reveal">
+
+                <div class="team-photo">
+                    <img src="nolige.JPEG" alt="Gestionnaire des Stocks">
+                </div>
+
+                <div class="team-info">
+
+                    <span>Marketing</span>
+
+                    <h3>
+                        Nolige KATEBA
+                    </h3>
+
+                    <p>
+                       Communication & marketing
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FORMATIONS
+========================================================= -->
+
+<section class="section formations" id="formations">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                FORMATIONS
+            </span>
+
+            <h2>
+                Développez vos
+                <span>compétences</span>
+            </h2>
+
+            <p>
+                Des formations orientées vers les sciences,
+                les technologies et les compétences numériques.
+            </p>
+
+        </div>
+
+
+        <div class="cards-grid">
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>
+                    Informatique
+                </h3>
+
+                <p>
+                    Initiation et perfectionnement
+                    dans les domaines informatiques.
+                </p>
+
+                <span class="card-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <h3>
+                    Mathématiques
+                </h3>
+
+                <p>
+                    Développement des connaissances
+                    et compétences mathématiques.
+                </p>
+
+                <span class="card-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <h3>
+                    Intelligence Artificielle
+                </h3>
+
+                <p>
+                    Découverte et développement de
+                    solutions basées sur l'intelligence artificielle.
+                </p>
+
+                <span class="card-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <h3>
+                    Électronique
+                </h3>
+
+                <p>
+                    Formation autour de l'électronique,
+                    du hardware et des technologies.
+                </p>
+
+                <span class="card-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section class="section services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                NOS SERVICES
+            </span>
+
+            <h2>
+                Des solutions pour
+                <span>vos projets</span>
+            </h2>
+
+            <p>
+                Le CREMI intervient dans plusieurs domaines
+                scientifiques et technologiques.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <article class="service-box reveal">
+
+                <div class="service-box-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h3>
+                    Solutions informatiques
+                </h3>
+
+                <p>
+                    Conception et accompagnement
+                    dans les projets numériques.
+                </p>
+
+            </article>
+
+
+            <article class="service-box reveal">
+
+                <div class="service-box-icon">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+
+                <h3>
+                    Recherche scientifique
+                </h3>
+
+                <p>
+                    Travaux de recherche dans les domaines
+                    scientifiques et technologiques.
+                </p>
+
+            </article>
+
+
+            <article class="service-box reveal">
+
+                <div class="service-box-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
+                <h3>
+                    Intelligence Artificielle
+                </h3>
+
+                <p>
+                    Exploration et développement de
+                    solutions basées sur l'IA.
+                </p>
+
+            </article>
+
+
+            <article class="service-box reveal">
+
+                <div class="service-box-icon">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+
+                <h3>
+                    Électronique & Hardware
+                </h3>
+
+                <p>
+                    Solutions techniques et accompagnement
+                    en électronique.
+                </p>
+
+            </article>
+
+
+            <article class="service-box reveal">
+
+                <div class="service-box-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <h3>
+                    Éditions scientifiques
+                </h3>
+
+                <p>
+                    Publication et diffusion de contenus
+                    scientifiques.
+                </p>
+
+            </article>
+
+
+            <article class="service-box reveal">
+
+                <div class="service-box-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <h3>
+                    Formation
+                </h3>
+
+                <p>
+                    Développement des compétences dans
+                    différents domaines scientifiques.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ACTUALITÉS
+========================================================= -->
+
+<section class="section news" id="actualites">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">
+                ACTUALITÉS
+            </span>
+
+            <h2>
+                Les nouvelles du
+                <span>CREMI</span>
+            </h2>
+
+            <p>
+                Découvrez les activités, formations et initiatives
+                récentes du Centre de Recherche en Mathématiques
+                et en Informatique.
+            </p>
+
+        </div>
+
+
+        <div class="news-grid">
+
+
+            <!-- =================================================
+                 ACTUALITÉ 1 — NEC
+            ================================================== -->
+
+            <article class="news-card reveal">
+
+                <div class="news-image">
+
+                    <img
+                        src="ACT.JFIF"
+                        alt="Formation en Intelligence Artificielle à la NEC"
+                    >
+
+                    <span>
+                        Formation
+                    </span>
+
+                </div>
+
+                <div class="news-content">
+
+                    <small>
+                        AOÛT 2026 • CREMI
+                    </small>
+
+                    <h3>
+                        Formation en Intelligence Artificielle à la NEC
+                    </h3>
+
+                    <p>
+                        En août 2026, le CREMI a formé une vingtaine
+                        de fidèles de la Nouvelle Église Chrétienne
+                        (NEC), dans la commune de Mont-Ngafula à
+                        Kinshasa.
+                    </p>
+
+                    <p>
+                        La formation portait sur le thème :
+                        <strong>
+                            « Les bases de l’Intelligence Artificielle
+                            pour un rendement professionnel »
+                        </strong>.
+                    </p>
+
+                    <p>
+                        Cette session avait pour objectif d'initier
+                        les participants aux fondamentaux de l'IA
+                        et de leur permettre d'exploiter ses
+                        potentialités dans leurs activités
+                        professionnelles et quotidiennes.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 ACTUALITÉ 2 — ONIP
+            ================================================== -->
+
+            <article class="news-card reveal">
+
+                <div class="news-image">
+
+                    <img
+                        src="E7.JPEG"
+                        alt="Formation en Intelligence Artificielle pour les agents de l'ONIP"
+                    >
+
+                    <span>
+                        Formation
+                    </span>
+
+                </div>
+
+                <div class="news-content">
+
+                    <small>
+                        AOÛT 2026 • ONIP
+                    </small>
+
+                    <h3>
+                        Formation des agents et cadres de l'ONIP
+                    </h3>
+
+                    <p>
+                        Au cours du mois d'août 2026, le CREMI a
+                        également assuré une formation au profit
+                        d'une dizaine d'agents et cadres de
+                        l'Office National d'Identification de la
+                        Population (ONIP), dans la commune de
+                        la Gombe à Kinshasa.
+                    </p>
+
+                    <p>
+                        La formation avait pour thème :
+                        <strong>
+                            « Les bases de l’Intelligence Artificielle
+                            pour un rendement professionnel »
+                        </strong>.
+                    </p>
+
+                    <p>
+                        Cette session visait à renforcer les capacités
+                        des participants dans l'utilisation pratique
+                        des outils d'IA afin d'améliorer leur
+                        productivité, leur efficacité et leur
+                        rendement professionnel.
+                    </p>
+                    <a href="ONIP2.html" >En savoir plus...</a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 ACTUALITÉ 3 — ENGAGEMENT CREMI
+            ================================================== -->
+
+            <article class="news-card reveal">
+
+                <div class="news-image">
+
+                    <img
+                        src="ACT.JFIF"
+                        alt="CREMI et le développement des compétences numériques"
+                    >
+
+                    <span>
+                        Innovation
+                    </span>
+
+                </div>
+
+                <div class="news-content">
+
+                    <small>
+                        AOÛT 2026 • INTELLIGENCE ARTIFICIELLE
+                    </small>
+
+                    <h3>
+                        CREMI s'engage pour la démocratisation de l'IA
+                    </h3>
+
+                    <p>
+                        À travers ses différentes initiatives de
+                        formation en Intelligence Artificielle,
+                        le CREMI confirme son engagement en faveur
+                        de la démocratisation des connaissances
+                        numériques en République Démocratique
+                        du Congo.
+                    </p>
+
+                    <p>
+                        Ces formations permettent aux professionnels,
+                        agents, cadres et autres participants de
+                        mieux comprendre les outils d'IA et leurs
+                        applications dans le monde professionnel.
+                    </p>
+
+                    <p>
+                        Toutes ces formations sont sanctionnées
+                        par des
+                        <strong>
+                            certificats de participation.
+                        </strong>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <div class="contact-content">
+
+                <span class="section-label light">
+                    CONTACT
+                </span>
+
+                <h2>
+                    Une question ?
+                    <br>
+                    <span>Parlons-en.</span>
+                </h2>
+
+                <p>
+                    Vous souhaitez obtenir des informations
+                    sur nos formations, nos activités ou nos services ?
+                </p>
+
+                <p>
+                    Notre équipe est disponible directement
+                    sur WhatsApp.
+                </p>
+
+
+                <a
+                    href="https://wa.me/243993734678?text=Bonjour%20CREMI%2C%20je%20souhaite%20obtenir%20plus%20d'informations."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="big-whatsapp"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <span>
+
+                        <small>
+                            CONTACTEZ-NOUS
+                        </small>
+
+                        Sur WhatsApp
+
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-decoration">
+
+                <div class="contact-circle circle-1"></div>
+
+                <div class="contact-circle circle-2"></div>
+
+                <div class="contact-circle circle-3"></div>
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                <div class="footer-logo-image">
+
+                    <img
+                        src="Logo.JPEG"
+                        alt="Logo CREMI"
+                    >
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        CREMI
+                    </strong>
+
+                    <span>
+                        Recherche • Innovation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+
+                Centre de Recherche en Mathématiques
+                et en Informatique.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="#apropos">
+                À propos
+            </a>
+
+            <a href="#organisation">
+                Organisation
+            </a>
+
+            <a href="#equipe">
+                Équipe
+            </a>
+
+            <a href="#formations">
+                Formations
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+
+            <a
+                href="https://wa.me/243993734678?text=Bonjour%20CREMI"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp
+
+            </a>
+
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                République Démocratique du Congo
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © <span id="currentYear"></span>
+            CREMI. Tous droits réservés.
+
+        </p>
+
+        <p>
+            Recherche • Mathématiques • Informatique
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP FLOTTANT
+========================================================= -->
+
+<a
+    href="https://wa.me/243993734678?text=Bonjour%20CREMI%2C%20je%20souhaite%20vous%20contacter."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-floating"
+    aria-label="Contacter le CREMI sur WhatsApp"
+>
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+        WhatsApp
+    </span>
+
+</a>
+
+
+<!-- =========================================================
+     RETOUR EN HAUT
+========================================================= -->
+
+<button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Retour en haut"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- JavaScript -->
+<script src="script.js">
+    /* =========================================================
+   CREMI
+   JAVASCRIPT
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =====================================================
+       JS ACTIVÉ
+    ===================================================== */
+
+    document.body.classList.add("js-enabled");
+
+
+    /* =====================================================
+       MENU MOBILE
+    ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    if (menuToggle && mobileMenu) {
+
+        const icon =
+            menuToggle.querySelector("i");
+
+
+        menuToggle.addEventListener("click", () => {
+
+            const isOpen =
+                mobileMenu.classList.toggle("active");
+
+
+            document.body.classList.toggle(
+                "menu-open",
+                isOpen
+            );
+
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Fermer le menu"
+                    : "Ouvrir le menu"
+            );
+
+
+            if (icon) {
+
+                icon.classList.toggle(
+                    "fa-bars",
+                    !isOpen
+                );
+
+                icon.classList.toggle(
+                    "fa-xmark",
+                    isOpen
+                );
+
+            }
+
+        });
+
+
+        /* Fermer le menu après un clic */
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        mobileMenu
+                            .classList
+                            .remove("active");
+
+                        document.body
+                            .classList
+                            .remove("menu-open");
+
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        menuToggle.setAttribute(
+                            "aria-label",
+                            "Ouvrir le menu"
+                        );
+
+
+                        if (icon) {
+
+                            icon.classList.add(
+                                "fa-bars"
+                            );
+
+                            icon.classList.remove(
+                                "fa-xmark"
+                            );
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+        /* Fermer si écran desktop */
+
+        window.addEventListener(
+            "resize",
+            () => {
+
+                if (window.innerWidth > 900) {
+
+                    mobileMenu
+                        .classList
+                        .remove("active");
+
+                    document.body
+                        .classList
+                        .remove("menu-open");
+
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    if (icon) {
+
+                        icon.classList.add(
+                            "fa-bars"
+                        );
+
+                        icon.classList.remove(
+                            "fa-xmark"
+                        );
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       HEADER AU SCROLL
+    ===================================================== */
+
+    const header =
+        document.getElementById("header");
+
+
+    function updateHeader() {
+
+        if (!header) return;
+
+
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 30
+        );
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+    );
+
+
+    updateHeader();
+
+
+    /* =====================================================
+       ANIMATIONS REVEAL
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    if ("IntersectionObserver" in window) {
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target
+                                .classList
+                                .add("visible");
+
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+    } else {
+
+        revealElements.forEach(element => {
+
+            element.classList.add(
+                "visible"
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
+       NAVIGATION ACTIVE
+    ===================================================== */
+
+    const sections =
+        document.querySelectorAll(
+            "section[id]"
+        );
+
+
+    const navLinks =
+        document.querySelectorAll(
+            ".navbar .nav-link"
+        );
+
+
+    function updateActiveNavigation() {
+
+        let currentSection =
+            "accueil";
+
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 160;
+
+            const sectionBottom =
+                sectionTop +
+                section.offsetHeight;
+
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionBottom
+            ) {
+
+                currentSection =
+                    section.id;
+
+            }
+
+        });
+
+
+        navLinks.forEach(link => {
+
+            const href =
+                link.getAttribute("href");
+
+
+            link.classList.toggle(
+                "active",
+                href ===
+                `#${currentSection}`
+            );
+
+        });
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateActiveNavigation,
+        { passive: true }
+    );
+
+
+    updateActiveNavigation();
+
+
+    /* =====================================================
+       RETOUR EN HAUT
+    ===================================================== */
+
+    const backToTop =
+        document.getElementById(
+            "backToTop"
+        );
+
+
+    if (backToTop) {
+
+        function updateBackToTop() {
+
+            backToTop.classList.toggle(
+                "show",
+                window.scrollY > 500
+            );
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            updateBackToTop,
+            { passive: true }
+        );
+
+
+        updateBackToTop();
+
+
+        backToTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       ANNÉE AUTOMATIQUE
+    ===================================================== */
+
+    const currentYear =
+        document.getElementById(
+            "currentYear"
+        );
+
+
+    if (currentYear) {
+
+        currentYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =====================================================
+       PROTECTION CONTEXT MENU DES IMAGES
+    ===================================================== */
+
+    document.addEventListener(
+        "contextmenu",
+        event => {
+
+            if (
+                event.target &&
+                event.target.tagName === "IMG"
+            ) {
+
+                event.preventDefault();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       ESC POUR FERMER LE MENU
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape" &&
+                mobileMenu &&
+                mobileMenu.classList.contains("active")
+            ) {
+
+                mobileMenu.classList.remove(
+                    "active"
+                );
+
+                document.body.classList.remove(
+                    "menu-open"
+                );
+
+
+                if (menuToggle) {
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            }
+
+        }
+    );
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Documents officiels PDF du CREMI">
+
+    <title>Documents PDF | CREMI</title>
+
+    <link rel="icon" href="Logo.JPEG">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="documents.css">
+    <style>
+        /* =========================================================
+   CREMI
+   BIBLIOTHÈQUE DE DOCUMENTS PDF
+========================================================= */
+
+:root {
+
+    --blue: #0876e8;
+    --blue-dark: #0754ad;
+    --blue-deep: #031b3a;
+    --cyan: #20c9f3;
+
+    --white: #ffffff;
+    --black: #111827;
+
+    --gray-100: #f8fafc;
+    --gray-200: #e5e7eb;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+
+    --red: #dc2626;
+
+    --shadow:
+        0 15px 45px rgba(3,27,58,.10);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f5f9ff;
+
+    color: var(--black);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width: min(1180px, 92%);
+
+    margin: auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(255,255,255,.96);
+
+    border-bottom:
+        1px solid rgba(8,118,232,.1);
+
+    backdrop-filter:
+        blur(15px);
+
+}
+
+
+.header-content {
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color: var(--blue-deep);
+
+}
+
+
+.logo img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+}
+
+
+.logo strong {
+
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 22px;
+
+}
+
+
+.logo span {
+
+    display: block;
+
+    max-width: 420px;
+
+    color: var(--gray-500);
+
+    font-size: 11px;
+
+}
+
+
+.home-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    background: #edf6ff;
+
+    color: var(--blue-dark);
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+.home-button:hover {
+
+    background: var(--blue);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(32,201,243,.25),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255,255,255,.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--blue-deep),
+            var(--blue-dark),
+            var(--blue)
+        );
+
+}
+
+
+.hero-content {
+
+    width: min(800px, 92%);
+
+}
+
+
+.hero-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    margin:
+        0 auto 22px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.12);
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    font-size: 30px;
+
+}
+
+
+.hero-label {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 900;
+
+    opacity: .85;
+
+}
+
+
+.hero h1 {
+
+    margin: 15px 0;
+
+    font-size:
+        clamp(42px, 6vw, 68px);
+
+    line-height: 1;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--cyan);
+
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    opacity: .85;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+
+    padding: 80px 0;
+
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.section-title span {
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-title h2 {
+
+    margin: 8px 0;
+
+    font-size: 35px;
+
+}
+
+
+.section-title p {
+
+    color: var(--gray-500);
+
+}
+
+
+/* =========================================================
+   PDF GRID
+========================================================= */
+
+.pdf-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+
+.pdf-card {
+
+    position: relative;
+
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border:
+        1px solid rgba(8,118,232,.07);
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transition: .35s;
+
+}
+
+
+.pdf-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--cyan)
+        );
+
+}
+
+
+.pdf-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 25px 60px
+        rgba(3,27,58,.15);
+
+}
+
+
+.number {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    font-size: 40px;
+
+    font-weight: 900;
+
+    color:
+        rgba(8,118,232,.06);
+
+}
+
+
+.pdf-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background: #fff1f2;
+
+    color: var(--red);
+
+    font-size: 28px;
+
+}
+
+
+.category {
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+}
+
+
+.pdf-card h3 {
+
+    margin: 8px 0;
+
+    font-size: 20px;
+
+}
+
+
+.pdf-card p {
+
+    min-height: 45px;
+
+    color: var(--gray-500);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+}
+
+
+.view-button,
+.open-button {
+
+    height: 44px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: .3s;
+
+}
+
+
+.view-button {
+
+    flex: 1;
+
+    border: none;
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+
+.view-button:hover {
+
+    background: var(--blue-dark);
+
+    transform: translateY(-2px);
+
+}
+
+
+.open-button {
+
+    width: 44px;
+
+    background: #edf6ff;
+
+    color: var(--blue-dark);
+
+}
+
+
+.open-button:hover {
+
+    background: var(--blue);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   PDF VIEWER
+========================================================= */
+
+.pdf-viewer {
+
+    display: none;
+
+    margin-top: 55px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px
+        rgba(3,27,58,.20);
+
+}
+
+
+.pdf-viewer.active {
+
+    display: block;
+
+    animation:
+        viewerAppear .5s ease;
+
+}
+
+
+@keyframes viewerAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.viewer-header {
+
+    min-height: 78px;
+
+    padding:
+        15px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--blue-deep);
+
+    color: white;
+
+}
+
+
+.viewer-header span {
+
+    color: var(--cyan);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 900;
+
+}
+
+
+.viewer-header h2 {
+
+    margin: 5px 0 0;
+
+    font-size: 20px;
+
+}
+
+
+.close-button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,.1);
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+.close-button:hover {
+
+    background:
+        rgba(255,255,255,.2);
+
+}
+
+
+.viewer {
+
+    padding: 10px;
+
+    background: #334155;
+
+}
+
+
+.viewer iframe {
+
+    width: 100%;
+
+    height: 750px;
+
+    display: block;
+
+    border: none;
+
+    background: white;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    background: #020f22;
+
+    color: white;
+
+}
+
+
+.footer-content {
+
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.footer strong {
+
+    color: var(--cyan);
+
+    font-size: 25px;
+
+}
+
+
+.footer p {
+
+    color: #94a3b8;
+
+}
+
+
+.footer-content a {
+
+    color: #cbd5e1;
+
+}
+
+
+.footer-content a:hover {
+
+    color: var(--cyan);
+
+}
+
+
+.copyright {
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .pdf-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .logo span {
+
+        display: none;
+
+    }
+
+
+    .home-button span {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        min-height: 340px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .main {
+
+        padding: 55px 0;
+
+    }
+
+
+    .pdf-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pdf-card {
+
+        padding: 24px;
+
+    }
+
+
+    .viewer iframe {
+
+        height: 600px;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px 0;
+
+    }
+
+}
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="container header-content">
+
+
+        <a href="index.html" class="logo">
+
+            <img src="Logo.JPEG"
+                 alt="Logo CREMI">
+
+            <div class="logo-text">
+
+                <strong>CREMI</strong>
+
+                <span>
+                    Centre de Recherche en Mathématiques
+                    et en Informatique
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <a href="index.html"
+           class="home-button">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Accueil</span>
+
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-icon">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+        </div>
+
+
+        <span class="hero-label">
+            DOCUMENTS OFFICIELS
+        </span>
+
+
+        <h1>
+            Bibliothèque
+            <span>PDF</span>
+        </h1>
+
+
+        <p>
+            Consultez les documents officiels du
+            Centre de Recherche en Mathématiques
+            et en Informatique.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DOCUMENTS
+===================================================== -->
+
+<main class="container main">
+
+
+    <div class="section-title">
+
+        <span>
+            DOCUMENTS DISPONIBLES
+        </span>
+
+        <h2>
+            Nos documents
+        </h2>
+
+        <p>
+            Cliquez sur « Voir le document » pour consulter
+            directement un fichier PDF.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         GRILLE DES 9 PDF
+    ================================================== -->
+
+    <section class="pdf-grid">
+
+
+        <!-- ================= PDF 1 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                01
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+
+            <span class="category">
+                Document 1
+            </span>
+
+
+            <h3>
+                Stella MANDAILA
+            </h3>
+
+
+            <p>
+                Présentation ou document officiel
+                du CREMI.
+            </p>
+
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Stella MANDAILA.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document1.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 2 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                02
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+               Bijoux MUADI
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Bijoux MUADI.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document2.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 3 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                03
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+               Clarice KAYENDA
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Clarice KAYENDA.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document3.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 4 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                04
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+                Evelyne KIKANGALA
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Evelyne KIKANGALA.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document4.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 5 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                05
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+                Hervé LUHEMBWE
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Hervé LUHEMBWE.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document5.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 6 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                06
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+               Jean-René MPUTU
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Jean-René MPUTU.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document6.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 7 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                07
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+                Belinda MUPULU
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Belinda MUPULU.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document7.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 8 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                08
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+                Déborah NTUMBA
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Déborah NTUMBA.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document8.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PDF 9 ================= -->
+
+        <article class="pdf-card">
+
+            <div class="number">
+                09
+            </div>
+
+            <div class="pdf-icon">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+            </div>
+
+            <span class="category">
+                DOCUMENT PDF
+            </span>
+
+            <h3>
+                Olivier EKANZA
+            </h3>
+
+            <p>
+                Document officiel disponible
+                au format PDF.
+            </p>
+
+            <div class="buttons">
+
+                <button
+                    onclick="openPDF('Olivier EKANZA.pdf')"
+                    class="view-button">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Voir le document
+
+                </button>
+
+
+                <a
+                    href="pdf/document9.pdf"
+                    target="_blank"
+                    class="open-button">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         VISIONNEUSE
+    ================================================== -->
+
+    <section id="pdfViewer" class="pdf-viewer">
+
+        <div class="viewer-header">
+
+            <div>
+
+                <span>
+                    LECTEUR PDF CREMI
+                </span>
+
+                <h2>
+                    Aperçu du document
+                </h2>
+
+            </div>
+
+
+            <button
+                onclick="closePDF()"
+                class="close-button">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="viewer">
+
+            <iframe
+                id="pdfFrame"
+                src=""
+                title="Document PDF">
+            </iframe>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+
+            <strong>CREMI</strong>
+
+            <p>
+                Centre de Recherche en Mathématiques
+                et en Informatique.
+            </p>
+
+        </div>
+
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            Retour à l'accueil
+
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        CREMI — Tous droits réservés.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* Année */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+
+    /* Ouvrir PDF */
+
+    function openPDF(file) {
+
+        const viewer =
+            document.getElementById("pdfViewer");
+
+        const frame =
+            document.getElementById("pdfFrame");
+
+
+        frame.src = file;
+
+
+        viewer.classList.add("active");
+
+
+        setTimeout(() => {
+
+            viewer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }, 100);
+
+    }
+
+
+
+    /* Fermer PDF */
+
+    function closePDF() {
+
+        const viewer =
+            document.getElementById("pdfViewer");
+
+        const frame =
+            document.getElementById("pdfFrame");
+
+
+        viewer.classList.remove("active");
+
+        frame.src = "";
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
