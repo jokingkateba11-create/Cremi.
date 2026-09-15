@@ -3652,6 +3652,43 @@ button {
 ========================================================= */
 
 @media (max-width: 600px) {
+        /* =====================================================
+       NAVIGATION VISIBLE SUR TÉLÉPHONE
+    ===================================================== */
+
+    .navbar {
+        display: flex !important;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Cache la barre de défilement */
+    .navbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Les boutons du menu */
+    .navbar a {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 8px 9px;
+        font-size: 11px;
+    }
+
+    /* Le bouton ☰ n'est plus nécessaire */
+    .menu-toggle {
+        display: none !important;
+    }
 
     * {
         max-width: 100%;
