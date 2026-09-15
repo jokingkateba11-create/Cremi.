@@ -3275,53 +3275,75 @@ button {
 
 
 /* =========================================================
-   RESPONSIVE 1100px
+   RESPONSIVE - TABLETTE LARGE
 ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(94%, 1100px);
+    }
+
+    .nav-container {
+        gap: 18px;
+    }
 
     .navbar {
-        gap: 14px;
+        gap: 13px;
     }
 
     .nav-link {
-        font-size: .74rem;
+        font-size: .72rem;
     }
 
     .nav-contact {
-        padding: 10px 13px;
+        padding: 9px 12px;
+        font-size: .72rem;
     }
 
     .hero-content {
-        gap: 40px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 5vw, 4rem);
     }
 
     .team-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .cards-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .organization-wrapper {
-        overflow-x: auto;
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .org-tree {
-        min-width: 1050px;
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 30px;
     }
 
 }
 
 
 /* =========================================================
-   RESPONSIVE 900px
+   RESPONSIVE - TABLETTE
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
+
+    .container {
+        width: 92%;
+    }
+
+    /* HEADER */
 
     .navbar {
         display: none;
@@ -3332,26 +3354,27 @@ button {
         place-items: center;
     }
 
+    .nav-container {
+        min-height: 72px;
+    }
+
+
+    /* HERO */
+
     .hero {
-
         min-height: auto;
-
-        padding:
-            135px 0 70px;
-
+        padding: 125px 0 70px;
     }
 
     .hero-content {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 50px;
-
+        grid-template-columns: 1fr;
+        gap: 55px;
+        text-align: center;
     }
 
     .hero-text {
-        text-align: center;
+        max-width: 750px;
+        margin: auto;
     }
 
     .hero-description {
@@ -3368,22 +3391,31 @@ button {
     }
 
     .hero-visual {
-        min-height: 450px;
+        min-height: 420px;
     }
 
+    .hero-logo-card {
+        width: min(390px, 80vw);
+    }
+
+
+    /* DIRECTEUR */
+
     .director-profile {
-
-        grid-template-columns:
-            1fr;
-
-        text-align: center;
-
+        grid-template-columns: 1fr;
         gap: 40px;
-
+        padding: 35px;
+        text-align: center;
     }
 
     .director-photo-frame {
         margin: auto;
+        width: min(330px, 80%);
+    }
+
+    .director-intro {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .director-achievements {
@@ -3394,145 +3426,452 @@ button {
         justify-content: center;
     }
 
-    .team-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+
+    /* ORGANIGRAMME */
+
+    .organization-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
+
+    .org-tree {
+        min-width: 900px;
+    }
+
+
+    /* TEAM */
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* FORMATIONS */
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SERVICES */
 
     .services-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
+
+    /* ACTUALITÉS */
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* CONTACT */
+
+    .contact-box {
+        padding: 50px;
+    }
+
+
+    /* FOOTER */
+
     .footer-grid {
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 
 }
 
 
 /* =========================================================
-   RESPONSIVE 600px
+   RESPONSIVE - TABLETTE PETITE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top: 75px;
+    }
 
     .container {
-        width: min(94%, 1200px);
+        width: 92%;
     }
 
-    .section {
-        padding:
-            75px 0;
-    }
-
-    .logo-text span {
-        display: none;
-    }
+    /* HEADER */
 
     .logo-image {
-        width: 43px;
-        height: 43px;
+        width: 44px;
+        height: 44px;
     }
 
+    .logo-text strong {
+        font-size: 1.05rem;
+    }
+
+
+    /* HERO */
+
     .hero {
-        padding-top:
-            120px;
+        padding: 115px 0 65px;
     }
 
     .hero h1 {
-
-        font-size:
-            2.35rem;
-
-        letter-spacing:
-            -1px;
-
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+        letter-spacing: -1.5px;
     }
 
     .hero-description {
-        font-size: .85rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .hero-visual {
-        min-height: 380px;
-    }
-
-    .hero-logo-card {
-        width: 300px;
-    }
-
-    .floating-card {
-        transform: scale(.85);
-    }
-
-    .floating-card-1 {
-        left: -5px;
-        top: 45px;
-    }
-
-    .floating-card-2 {
-        right: -5px;
-        bottom: 40px;
+        font-size: .9rem;
+        line-height: 1.7;
     }
 
     .hero-stats {
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
-        gap: 12px;
-
+        gap: 25px;
     }
 
-    .stat strong {
-        font-size: 1.35rem;
+    .hero-visual {
+        min-height: 370px;
     }
 
-    .stat span {
-        font-size: .57rem;
+    .hero-logo-card {
+        width: min(330px, 75vw);
+        border-radius: 25px;
     }
 
-    .section-heading h2 {
-        font-size:
-            2rem;
+    .floating-card {
+        transform: scale(.82);
     }
+
+    .floating-card-1 {
+        left: 0;
+        top: 40px;
+    }
+
+    .floating-card-2 {
+        right: 0;
+        bottom: 35px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    /* DIRECTEUR */
 
     .director-profile {
-
-        padding:
-            25px 17px;
-
-        border-radius:
-            22px;
-
+        padding: 30px 22px;
+        border-radius: 22px;
     }
 
     .director-photo-frame {
-        max-width: 275px;
+        width: min(300px, 80vw);
     }
 
     .director-photo-frame img {
-        height: 330px;
+        height: 350px;
+    }
+
+    .director-content h3 {
+        font-size: 2rem;
     }
 
     .director-achievements {
         grid-template-columns: 1fr;
     }
 
-    .director-content h3 {
+
+    /* ORGANIGRAMME */
+
+    .organization-wrapper {
+        padding: 40px 15px;
+        border-radius: 22px;
+        margin-top: 70px;
+    }
+
+    /*
+       Important :
+       on garde l'organigramme large,
+       mais on permet le défilement horizontal.
+    */
+
+    .org-tree {
+        min-width: 850px;
+    }
+
+
+    /* CARTES */
+
+    .team-grid,
+    .cards-grid,
+    .services-grid,
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-photo {
+        height: 280px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding: 75px 0;
+    }
+
+    .contact-box {
+        padding: 45px 30px;
+        min-height: 420px;
+    }
+
+    .contact-content h2 {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TÉLÉPHONE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    * {
+        max-width: 100%;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* HEADER */
+
+    .nav-container {
+        min-height: 68px;
+    }
+
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text strong {
+        font-size: .98rem;
+    }
+
+    .logo-text span {
+        display: none;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 105px 0 60px;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        line-height: 1.08;
+        letter-spacing: -1px;
+    }
+
+    .hero-mini-title {
+        font-size: .62rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-badge {
+        font-size: .62rem;
+        padding: 7px 11px;
+    }
+
+    .hero-description {
+        font-size: .82rem;
+        line-height: 1.7;
+    }
+
+
+    /* BOUTONS */
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        min-height: 48px;
+    }
+
+
+    /* STATISTIQUES */
+
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+
+    .stat strong {
+        font-size: 1.15rem;
+    }
+
+    .stat span {
+        display: block;
+        font-size: .52rem;
+        line-height: 1.3;
+    }
+
+
+    /* HERO VISUEL */
+
+    .hero-visual {
+        min-height: 320px;
+    }
+
+    .hero-logo-card {
+        width: min(280px, 72vw);
+        border-radius: 22px;
+    }
+
+    .hero-logo-card img {
+        width: 55%;
+        height: 55%;
+    }
+
+    .hero-logo-label {
+        bottom: 18px;
+    }
+
+    .hero-logo-label span {
+        font-size: .75rem;
+    }
+
+    .hero-logo-label small {
+        font-size: .52rem;
+    }
+
+
+    /* CARTES FLOTTANTES */
+
+    .floating-card {
+        padding: 9px 11px;
+        gap: 7px;
+        border-radius: 11px;
+        transform: scale(.72);
+    }
+
+    .floating-card-1 {
+        left: -12px;
+        top: 25px;
+    }
+
+    .floating-card-2 {
+        right: -12px;
+        bottom: 20px;
+    }
+
+    .floating-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
         font-size: 1.9rem;
+    }
+
+    .section-heading p {
+        font-size: .82rem;
+    }
+
+
+    /* DIRECTEUR */
+
+    .director-profile {
+        padding: 22px 15px;
+        border-radius: 20px;
+    }
+
+    .director-photo-frame {
+        width: min(260px, 78vw);
+    }
+
+    .director-photo-frame img {
+        height: 310px;
+    }
+
+    .director-content h3 {
+        font-size: 1.75rem;
+    }
+
+    .director-intro {
+        font-size: .8rem;
+    }
+
+    .director-achievement {
+        padding: 12px;
+    }
+
+    .director-achievement strong {
+        font-size: .68rem;
+    }
+
+    .director-achievement p {
+        font-size: .59rem;
     }
 
     .director-status {
@@ -3544,53 +3883,66 @@ button {
         justify-content: center;
     }
 
+
+    /* ORGANIGRAMME */
+
     .organization-wrapper {
+        margin-top: 55px;
+        padding: 35px 10px;
+        border-radius: 20px;
+    }
 
-        margin-top:
-            70px;
+    /*
+       On NE force plus 950px sur le téléphone.
+       On utilise un conteneur scrollable.
+    */
 
-        padding:
-            40px 15px;
-
-        border-radius:
-            23px;
-
+    .organization-wrapper {
+        overflow-x: auto;
     }
 
     .org-tree {
-        min-width: 950px;
+        min-width: 820px;
     }
+
+
+    /* TEAM / FORMATIONS / SERVICES / NEWS */
 
     .team-grid,
     .cards-grid,
     .services-grid,
     .news-grid {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
 
     .team-photo {
-        height: 310px;
+        height: 300px;
     }
 
+    .service-card,
+    .service-box {
+        padding: 24px;
+    }
+
+
+    /* CONTACT */
+
     .contact-section {
-        padding: 70px 0;
+        padding: 60px 0;
     }
 
     .contact-box {
-
-        padding:
-            40px 24px;
-
-        min-height:
-            450px;
-
+        padding: 38px 20px;
+        min-height: 430px;
+        border-radius: 22px;
     }
 
     .contact-content h2 {
-        font-size: 2.3rem;
+        font-size: 2rem;
+    }
+
+    .contact-content p {
+        font-size: .78rem;
     }
 
     .big-whatsapp {
@@ -3598,44 +3950,113 @@ button {
         justify-content: center;
     }
 
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 50px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 30px;
     }
 
     .footer-bottom {
-
-        flex-direction:
-            column;
-
-        text-align:
-            center;
-
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
     }
 
+
+    /* WHATSAPP */
+
     .whatsapp-floating {
-
-        width: 54px;
-        height: 54px;
-
+        width: 52px;
+        height: 52px;
         padding: 0;
-
         justify-content: center;
-
-        right: 15px;
-        bottom: 15px;
-
+        right: 14px;
+        bottom: 14px;
     }
 
     .whatsapp-floating span {
         display: none;
     }
 
+
+    /* TOP */
+
     .back-to-top {
+        right: 14px;
+        bottom: 75px;
+        width: 40px;
+        height: 40px;
+    }
 
-        right: 15px;
-        bottom: 78px;
+}
 
+
+/* =========================================================
+   PETIT TÉLÉPHONE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .logo-text strong {
+        font-size: .9rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: .78rem;
+    }
+
+    .hero-stats {
+        gap: 5px;
+    }
+
+    .stat strong {
+        font-size: 1rem;
+    }
+
+    .stat span {
+        font-size: .48rem;
+    }
+
+    .hero-logo-card {
+        width: 245px;
+    }
+
+    .floating-card {
+        transform: scale(.62);
+    }
+
+    .floating-card-1 {
+        left: -25px;
+    }
+
+    .floating-card-2 {
+        right: -25px;
+    }
+
+    .director-photo-frame {
+        width: 230px;
+    }
+
+    .director-photo-frame img {
+        height: 280px;
+    }
+
+    .contact-content h2 {
+        font-size: 1.8rem;
     }
 
 }
@@ -3654,16 +4075,9 @@ button {
     *,
     *::before,
     *::after {
-
-        animation-duration:
-            .01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
-        transition-duration:
-            .01ms !important;
-
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
     }
 
 }
