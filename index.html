@@ -4134,6 +4134,68 @@ button {
     background: #084298;
     transform: translateY(-2px);
 }
+    /* =========================================================
+   MENU MOBILE
+========================================================= */
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: currentColor;
+    border-radius: 3px;
+    transition: .3s;
+}
+    @media (max-width: 600px) {
+
+    .mobile-menu {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+        background: white;
+        z-index: 1000;
+        padding: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 15px 12px;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+        font-weight: 600;
+    }
+}
 </style>
 
 <body>
