@@ -3857,53 +3857,28 @@ button {
         width:
             92%;
     }
-    /* =========================================================
-   HEADER TABLETTE + MOBILE
-   NAVIGATION TOUJOURS VISIBLE
-========================================================= */
 
-.nav-container {
-    min-height: 72px;
-    gap: 15px;
-}
 
-/* Navigation visible */
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+    /* HEADER */
 
-    flex: 1;
-    justify-content: flex-end;
+    .navbar {
 
-    overflow-x: auto;
-    white-space: nowrap;
+        display:
+            none;
+    }
 
-    scrollbar-width: none;
-}
+    .menu-toggle {
 
-.navbar::-webkit-scrollbar {
-    display: none;
-}
+        display:
+            flex;
+    }
 
-/* Liens */
-.nav-link {
-    flex-shrink: 0;
-    font-size: .72rem;
-    padding: 7px 0;
-}
+    .nav-container {
 
-/* Cacher le bouton hamburger */
-.menu-toggle {
-    display: none !important;
-}
+        min-height:
+            72px;
+    }
 
-/* Bouton contact */
-.nav-contact {
-    flex-shrink: 0;
-    padding: 9px 13px;
-    font-size: .68rem;
-}
 
     /* HERO */
 
@@ -4387,36 +4362,14 @@ button {
             none;
     }
 
-    /* =========================================================
-   NAVIGATION MOBILE
-========================================================= */
+    .menu-toggle {
 
-.nav-container {
-    min-height: 68px;
-    gap: 10px;
-}
+        width:
+            42px;
 
-.navbar {
-    gap: 14px;
-    justify-content: flex-start;
-
-    overflow-x: auto;
-    white-space: nowrap;
-
-    flex: 1;
-}
-
-.nav-link {
-    flex-shrink: 0;
-    font-size: .68rem;
-    padding: 6px 0;
-}
-
-.nav-contact {
-    flex-shrink: 0;
-    padding: 8px 11px;
-    font-size: .62rem;
-}
+        height:
+            42px;
+    }
 
 
     /* MOBILE MENU */
@@ -5019,6 +4972,1198 @@ button {
             .01ms !important;
     }
 }
+/* =========================================================
+   CREMI — NOUVEAU DESIGN BLEU CALME
+   Bleu doux + bleu foncé + petites touches de jaune
+   À COLLER À LA FIN DE TON CSS
+========================================================= */
+
+:root {
+    --blue: #477DAF;
+    --blue-light: #6D9BC5;
+    --blue-dark: #234F7C;
+
+    --blue-deep: #193B5C;
+    --blue-night: #F3F7FB;
+
+    --cyan: #8BB5D8;
+    --cyan-light: #DCEAF6;
+
+    --card: #FFFFFF;
+    --card-light: #F7FAFD;
+    --card-dark: #EAF1F8;
+
+    --section: #F4F7FB;
+    --section-light: #FFFFFF;
+
+    --white: #FFFFFF;
+    --text: #26394D;
+    --text-muted: #61758A;
+    --text-soft: #8294A6;
+
+    --border: rgba(45, 91, 137, .13);
+
+    --green: #234F7C;
+    --green-dark: #193B5C;
+
+    --yellow: #E7C65B;
+
+    --shadow: 0 12px 35px rgba(30, 65, 100, .08);
+    --shadow-hover: 0 18px 40px rgba(30, 65, 100, .14);
+
+    --radius: 14px;
+}
+
+/* BASE */
+
+body {
+    color: var(--text);
+    background: #F4F7FB;
+}
+
+::selection {
+    background: var(--blue);
+    color: white;
+}
+
+.container {
+    width: min(1160px, 92%);
+}
+
+/* =========================================================
+   BARRE D'ACCUEIL — PLUS COURTE
+========================================================= */
+
+.header {
+    background: rgba(255, 255, 255, .97);
+    border-bottom: 1px solid #E5ECF3;
+    box-shadow: 0 4px 18px rgba(30, 65, 100, .05);
+    backdrop-filter: blur(14px);
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, .99);
+    box-shadow: 0 5px 20px rgba(30, 65, 100, .10);
+}
+
+.nav-container {
+    min-height: 64px;
+    gap: 20px;
+}
+
+.logo {
+    gap: 9px;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    background: #EAF1F8;
+    border: 1px solid #DCE7F1;
+    border-radius: 9px;
+    box-shadow: none;
+}
+
+.logo-text strong {
+    color: var(--blue-dark);
+    font-size: 1.12rem;
+}
+
+.logo-text span {
+    color: #718398;
+    font-size: .55rem;
+    margin-top: 4px;
+}
+
+/* Navigation */
+
+.navbar {
+    gap: 19px;
+}
+
+.nav-link {
+    color: #52677D;
+    font-size: .77rem;
+    font-weight: 700;
+    padding: 6px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--blue-dark);
+}
+
+.nav-link::after {
+    height: 2px;
+    background: var(--yellow);
+}
+
+/* Bouton contact */
+
+.nav-contact {
+    background: var(--blue-dark);
+    color: white;
+    padding: 9px 14px;
+    border-radius: 7px;
+    font-size: .72rem;
+    box-shadow: none;
+}
+
+.nav-contact:hover {
+    background: #173B60;
+}
+
+/* Menu mobile */
+
+.menu-toggle {
+    background: #EDF3F9;
+    border: 1px solid #D9E5F0;
+    border-radius: 8px;
+}
+
+.menu-toggle span {
+    background: var(--blue-dark);
+}
+
+.menu-toggle:hover {
+    background: #DCE9F5;
+    border-color: var(--blue);
+}
+
+.mobile-menu {
+    top: 64px;
+    background: white;
+    border-top: 1px solid #E5ECF3;
+    box-shadow: 0 12px 25px rgba(30, 65, 100, .10);
+}
+
+.mobile-menu a {
+    color: #40576E;
+    border-bottom: 1px solid #EDF1F5;
+}
+
+.mobile-menu a:hover {
+    color: var(--blue-dark);
+}
+
+.mobile-contact {
+    background: var(--blue-dark);
+    color: white !important;
+}
+
+/* =========================================================
+   HERO — BLEU DOUX
+========================================================= */
+
+.hero {
+    min-height: 680px;
+    padding: 125px 0 65px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.65), transparent 28%),
+        linear-gradient(135deg, #EAF2FA 0%, #DCE9F5 55%, #C9DCEC 100%);
+    color: var(--blue-deep);
+}
+
+.hero-grid-pattern {
+    opacity: .18;
+    background-image:
+        linear-gradient(rgba(45,91,137,.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,91,137,.10) 1px, transparent 1px);
+}
+
+.hero-glow-1 {
+    border-color: rgba(45,91,137,.12);
+    box-shadow: 0 0 100px rgba(71,125,175,.10);
+}
+
+.hero-glow-2 {
+    background: rgba(231,198,91,.12);
+}
+
+.hero-badge {
+    color: var(--blue-dark);
+    background: rgba(255,255,255,.75);
+    border: 1px solid #D8E4EF;
+    backdrop-filter: blur(8px);
+}
+
+.badge-dot {
+    background: var(--yellow);
+    box-shadow: 0 0 10px rgba(231,198,91,.5);
+}
+
+.hero-mini-title {
+    color: var(--blue-dark);
+}
+
+.hero h1 {
+    color: #193B5C;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #477DAF, #234F7C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-description {
+    color: #526A80;
+}
+
+.hero-stats {
+    border-top: 1px solid rgba(35,79,124,.16);
+}
+
+.stat strong {
+    color: var(--blue-dark);
+}
+
+.stat span {
+    color: #718398;
+}
+
+/* Boutons bleus */
+
+.btn-primary,
+.btn-whatsapp {
+    background: var(--blue-dark);
+    color: white;
+    box-shadow: 0 7px 18px rgba(35,79,124,.16);
+}
+
+.btn-primary:hover,
+.btn-whatsapp:hover {
+    background: #173B60;
+    transform: translateY(-2px);
+}
+
+/* Image du hero */
+
+.hero-logo-card {
+    background: rgba(255,255,255,.65);
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(35,79,124,.12);
+    backdrop-filter: blur(12px);
+}
+
+.hero-logo-card::before {
+    border-color: rgba(35,79,124,.10);
+}
+
+.hero-logo-card::after {
+    background: rgba(71,125,175,.12);
+}
+
+.hero-logo-label span {
+    color: var(--blue-dark);
+}
+
+.hero-logo-label small {
+    color: #718398;
+}
+
+/* Cartes flottantes */
+
+.floating-card {
+    border: 1px solid #E5ECF3;
+    box-shadow: 0 12px 30px rgba(35,79,124,.12);
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-heading h2 {
+    color: var(--blue-deep);
+}
+
+.section-heading h2 span {
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--text-muted);
+}
+
+.section-label {
+    color: var(--blue);
+}
+
+/* Fonds des sections */
+
+.about,
+.team,
+.services,
+.contact-section {
+    background: #F4F7FB;
+}
+
+.formations {
+    background: #FFFFFF;
+}
+
+.news {
+    background: #EAF1F8;
+}
+
+/* =========================================================
+   CARTES GÉNÉRALES
+========================================================= */
+
+.director-profile,
+.team-card,
+.service-card,
+.service-box,
+.news-card,
+.organization-wrapper {
+    background: #FFFFFF;
+    border: 1px solid #E2EAF2;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.director-profile::before {
+    width: 4px;
+    background: var(--blue-dark);
+}
+
+/* Photo du directeur */
+
+.director-photo-frame {
+    background: linear-gradient(145deg, var(--blue-dark), var(--blue-light));
+    box-shadow: 0 12px 30px rgba(35,79,124,.14);
+}
+
+.director-photo-top,
+.director-photo-badge {
+    background: rgba(25,59,92,.92);
+    color: white;
+}
+
+/* Textes du directeur */
+
+.director-label {
+    color: var(--blue);
+}
+
+.director-content h3 {
+    color: var(--blue-deep);
+}
+
+.director-content h3 span {
+    color: var(--blue);
+}
+
+.director-intro {
+    color: #5D7185;
+}
+
+.director-achievement {
+    background: #F6F9FC;
+    border: 1px solid #E6EDF4;
+}
+
+.director-achievement:hover {
+    background: #EDF4FA;
+    border-color: #C9DCEC;
+    box-shadow: none;
+}
+
+.achievement-icon {
+    background: #E5EFF8;
+    color: var(--blue-dark);
+}
+
+.director-achievement strong {
+    color: var(--blue-deep);
+}
+
+.director-achievement p {
+    color: #718398;
+}
+
+.director-status {
+    border-color: #E5ECF3;
+}
+
+.director-status span {
+    background: #EAF1F8;
+    color: var(--blue-dark);
+}
+
+.director-status i {
+    color: var(--yellow);
+}
+
+/* =========================================================
+   ORGANIGRAMME
+========================================================= */
+
+.organization-wrapper {
+    background: #FFFFFF;
+    border: 1px solid #E2EAF2;
+}
+
+.organization-heading h2 {
+    color: var(--blue-deep);
+}
+
+.organization-heading h2 span {
+    color: var(--blue);
+}
+
+.organization-heading p {
+    color: var(--text-muted);
+}
+
+.org-dg {
+    background: var(--blue-dark);
+    border: 1px solid #315F8C;
+    box-shadow: 0 10px 25px rgba(35,79,124,.16);
+}
+
+.org-dg-icon {
+    background: rgba(255,255,255,.13);
+    color: var(--yellow);
+}
+
+.org-dg span {
+    color: #EAD78C;
+}
+
+.org-dg p {
+    color: rgba(255,255,255,.72);
+}
+
+.org-main-connector,
+.org-horizontal-line,
+.org-connector {
+    background: #B6C9DB;
+}
+
+.org-direction {
+    background: white;
+    border: 1px solid #E0E8F0;
+    box-shadow: 0 6px 18px rgba(35,79,124,.07);
+}
+
+.org-direction:hover {
+    border-color: #9CBAD5;
+    box-shadow: 0 12px 25px rgba(35,79,124,.10);
+}
+
+.org-direction-header {
+    background: #EDF3F9;
+    border-bottom: 1px solid #E0E8F0;
+}
+
+.org-direction-header small {
+    color: var(--blue);
+}
+
+.org-direction-header h3 {
+    color: var(--blue-deep);
+}
+
+.org-direction-icon {
+    background: var(--blue-dark);
+    color: white;
+    box-shadow: none;
+}
+
+.org-department {
+    background: #F7F9FC;
+    border: 1px solid #EDF1F5;
+}
+
+.org-department:hover {
+    background: #EDF4FA;
+    border-color: #D4E2EF;
+}
+
+.org-department i {
+    color: var(--blue);
+}
+
+.org-department span {
+    color: #536A80;
+}
+
+.org-legend {
+    border-color: #E5ECF3;
+}
+
+.org-legend div {
+    color: #718398;
+}
+
+.dot-dg {
+    background: var(--blue-deep);
+}
+
+.dot-direction {
+    background: var(--blue);
+}
+
+.dot-department {
+    background: var(--yellow);
+}
+
+/* =========================================================
+   ÉQUIPE
+========================================================= */
+
+.team-card:hover,
+.news-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.team-photo {
+    background: #EAF1F8;
+}
+
+.team-info span {
+    color: var(--blue);
+}
+
+.team-info h3 {
+    color: var(--blue-deep);
+}
+
+.team-info p {
+    color: var(--text-muted);
+}
+
+/* =========================================================
+   FORMATIONS ET SERVICES
+========================================================= */
+
+.service-card,
+.service-box {
+    background: #FFFFFF;
+    border: 1px solid #E2EAF2;
+    box-shadow: 0 6px 20px rgba(35,79,124,.05);
+}
+
+.service-card::before {
+    background: var(--yellow);
+}
+
+.service-card:hover,
+.service-box:hover {
+    border-color: #C7D9E9;
+    box-shadow: var(--shadow-hover);
+}
+
+.service-icon,
+.service-box-icon {
+    background: #EAF1F8;
+    color: var(--blue-dark);
+}
+
+.service-card h3,
+.service-box h3 {
+    color: var(--blue-deep);
+}
+
+.service-card p,
+.service-box p {
+    color: #63788D;
+}
+
+.card-arrow {
+    color: var(--blue);
+}
+
+/* =========================================================
+   ACTUALITÉS
+========================================================= */
+
+.news-card {
+    background: white;
+}
+
+.news-image span {
+    background: rgba(35,79,124,.92);
+}
+
+.news-content small {
+    color: var(--blue);
+}
+
+.news-content h3 {
+    color: var(--blue-deep);
+}
+
+.news-content p {
+    color: #63788D;
+}
+
+/* =========================================================
+   BOUTONS ET LIENS
+========================================================= */
+
+.more-link {
+    background: var(--blue-dark);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(35,79,124,.15);
+}
+
+.more-link:hover {
+    background: #173B60;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-box {
+    background: linear-gradient(125deg, #234F7C, #477DAF);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(35,79,124,.16);
+}
+
+.section-label.light {
+    color: #F1D77D;
+}
+
+.contact-content h2 {
+    color: white;
+}
+
+.contact-content h2 span {
+    color: #F1D77D;
+}
+
+.contact-content p {
+    color: rgba(255,255,255,.82);
+}
+
+.big-whatsapp {
+    background: #193B5C;
+    color: white;
+    box-shadow: none;
+}
+
+.big-whatsapp:hover {
+    background: #102D49;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background: #193B5C;
+    color: white;
+}
+
+.footer-logo-image {
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.footer-logo span {
+    color: #C1D1E0;
+}
+
+.footer-brand p,
+.footer-contact p {
+    color: #C1D1E0;
+}
+
+.footer h3 {
+    color: white;
+}
+
+.footer-links a {
+    color: #C1D1E0;
+}
+
+.footer-links a:hover {
+    color: #F1D77D;
+}
+
+.footer-contact a {
+    color: #F1D77D;
+}
+
+.footer-bottom {
+    border-color: rgba(255,255,255,.15);
+    color: #B4C7D9;
+}
+
+/* =========================================================
+   BOUTONS FLOTTANTS
+========================================================= */
+
+.whatsapp-floating {
+    background: var(--blue-dark);
+    color: white;
+    box-shadow: 0 8px 22px rgba(35,79,124,.20);
+}
+
+.whatsapp-floating:hover {
+    background: #173B60;
+}
+
+.back-to-top {
+    background: var(--blue-dark);
+    color: white;
+    border: 1px solid rgba(255,255,255,.2);
+}
+
+.back-to-top:hover {
+    background: var(--blue);
+}
+
+/* =========================================================
+   RESPONSIVE — BARRE PLUS COURTE
+========================================================= */
+
+@media (max-width: 1200px) {
+    .nav-container {
+        min-height: 62px;
+    }
+
+    .navbar {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-container {
+        min-height: 60px;
+    }
+
+    .navbar {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 12px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .navbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-link {
+        flex-shrink: 0;
+        font-size: .69rem;
+    }
+
+    .nav-contact {
+        flex-shrink: 0;
+        padding: 8px 10px;
+        font-size: .65rem;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        min-height: 58px;
+        gap: 9px;
+    }
+
+    .logo-image {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-text strong {
+        font-size: .95rem;
+    }
+
+    .navbar {
+        gap: 11px;
+    }
+
+    .nav-link {
+        font-size: .65rem;
+    }
+
+    .nav-contact {
+        padding: 7px 9px;
+        font-size: .60rem;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        min-height: 56px;
+        gap: 8px;
+    }
+
+    .logo-image {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-text strong {
+        font-size: .88rem;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: .61rem;
+    }
+
+    .nav-contact {
+        padding: 7px 8px;
+        font-size: .57rem;
+    }
+
+    .mobile-menu {
+        top: 56px;
+        max-height: calc(100vh - 56px);
+    }
+
+    .hero {
+        padding-top: 95px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-container {
+        gap: 6px;
+    }
+
+    .navbar {
+        gap: 8px;
+    }
+
+    .nav-link {
+        font-size: .57rem;
+    }
+
+    .nav-contact {
+        padding: 6px 7px;
+        font-size: .54rem;
+    }
+}
+
+/* =========================================================
+   CREMI — BLEU CALME + VERT + JAUNE
+   Remplacement des surfaces blanches
+========================================================= */
+
+:root {
+    /* Palette principale */
+    --blue: #477DAF;
+    --blue-light: #6D9BC5;
+    --blue-dark: #234F7C;
+    --blue-deep: #193B5C;
+
+    /* Bleu calme pour remplacer le blanc */
+    --blue-soft: #E5EFF8;
+    --blue-lighter: #DCEAF5;
+    --blue-medium: #C9DDED;
+
+    /* Petites touches de vert */
+    --green: #399B78;
+    --green-dark: #28785D;
+    --green-soft: #DCEFE7;
+
+    /* Petites touches de jaune */
+    --yellow: #E7C65B;
+    --yellow-soft: #F8F0D4;
+
+    /* Textes */
+    --text: #26394D;
+    --text-muted: #61758A;
+
+    /* Surfaces */
+    --card: #DCEAF5;
+    --section: #E5EFF8;
+}
+
+/* FOND GÉNÉRAL */
+
+body {
+    background: var(--blue-soft);
+    color: var(--text);
+}
+
+/* BARRE D'ACCUEIL */
+
+.header,
+.header.scrolled {
+    background: rgba(220, 234, 245, .97);
+    border-bottom: 1px solid #C9DDED;
+}
+
+.mobile-menu {
+    background: var(--blue-soft);
+    border-top: 1px solid var(--blue-medium);
+}
+
+.mobile-menu a {
+    border-bottom: 1px solid var(--blue-medium);
+}
+
+/* SECTIONS */
+
+.about,
+.team,
+.services,
+.contact-section,
+.formations,
+.news {
+    background: var(--blue-soft);
+}
+
+/* Alternance de bleu entre les sections */
+
+.about,
+.services,
+.contact-section {
+    background: #E5EFF8;
+}
+
+.team,
+.formations {
+    background: #DCEAF5;
+}
+
+.news {
+    background: #EAF2F9;
+}
+
+/* CARTES */
+
+.director-profile,
+.team-card,
+.service-card,
+.service-box,
+.news-card,
+.organization-wrapper {
+    background: #DCEAF5;
+    border: 1px solid #C5D9EA;
+    box-shadow: 0 10px 28px rgba(35, 79, 124, .09);
+}
+
+/* ÉLÉMENTS INTÉRIEURS */
+
+.director-achievement,
+.org-department {
+    background: #EAF2F9;
+    border: 1px solid #D0E0ED;
+}
+
+.org-direction {
+    background: #DCEAF5;
+    border: 1px solid #C5D9EA;
+}
+
+.org-direction-header {
+    background: #C9DDED;
+}
+
+.org-department:hover,
+.director-achievement:hover {
+    background: #D3E5F2;
+}
+
+/* FORMULAIRES */
+
+input,
+textarea,
+select {
+    background: #DCEAF5;
+    color: var(--blue-deep);
+    border: 1px solid #B8D0E3;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--blue);
+    outline: none;
+}
+
+/* ICÔNES ET DÉTAILS VERTS */
+
+.achievement-icon,
+.service-icon,
+.service-box-icon {
+    background: var(--green-soft);
+    color: var(--green-dark);
+}
+
+.org-department i {
+    color: var(--green);
+}
+
+.team-info span {
+    color: var(--green-dark);
+}
+
+.section-label {
+    color: var(--green-dark);
+}
+
+.card-arrow {
+    color: var(--green);
+}
+
+/* BORDURES VERTES AU SURVOL */
+
+.team-card:hover,
+.service-card:hover,
+.service-box:hover,
+.news-card:hover {
+    border-color: var(--green);
+}
+
+/* BOUTONS SECONDAIRES VERTS */
+
+.btn-secondary,
+.button-secondary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-secondary:hover,
+.button-secondary:hover {
+    background: var(--green-dark);
+}
+
+/* JAUNE DISCRET */
+
+.nav-link::after {
+    background: var(--yellow);
+}
+
+.badge-dot {
+    background: var(--yellow);
+}
+
+.hero-glow-2 {
+    background: rgba(231, 198, 91, .17);
+}
+
+.service-card::before {
+    background: var(--yellow);
+}
+
+.org-legend .dot-department {
+    background: var(--yellow);
+}
+
+.director-status i {
+    color: var(--yellow);
+}
+
+/* PETITS BADGES JAUNES */
+
+.badge,
+.highlight-yellow {
+    background: var(--yellow-soft);
+    color: #806A23;
+}
+
+/* TITRES IMPORTANTS */
+
+.section-heading h2,
+.organization-heading h2 {
+    color: var(--blue-deep);
+}
+
+.section-heading h2 span,
+.organization-heading h2 span {
+    color: var(--green-dark);
+}
+
+/* HERO */
+
+.hero {
+    background:
+        radial-gradient(circle at 85% 20%, rgba(231,198,91,.16), transparent 28%),
+        linear-gradient(135deg, #E5EFF8 0%, #DCEAF5 55%, #C9DDED 100%);
+}
+
+/* CONTACT */
+
+.contact-box {
+    background: linear-gradient(125deg, #234F7C, #477DAF);
+}
+
+.contact-content h2 span {
+    color: var(--yellow);
+}
+
+/* FOOTER */
+
+.footer {
+    background: #193B5C;
+}
+
+/* BOUTONS PRINCIPAUX */
+
+.btn-primary,
+.nav-contact,
+.more-link,
+.whatsapp-floating,
+.back-to-top {
+    background: var(--blue-dark);
+    color: white;
+}
+
+.btn-primary:hover,
+.nav-contact:hover,
+.more-link:hover {
+    background: var(--blue-deep);
+}
+
+/* LIENS AU SURVOL */
+
+a:hover {
+    color: var(--green-dark);
+}
+
+/* SÉLECTION DU TEXTE */
+
+::selection {
+    background: var(--green);
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .header,
+    .header.scrolled {
+        background: #DCEAF5;
+    }
+
+    .mobile-menu {
+        background: #DCEAF5;
+    }
+}
+
 </style>
 
 <body>
