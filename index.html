@@ -6163,6 +6163,120 @@ a:hover {
         background: #DCEAF5;
     }
 }
+    
+/* =========================================
+   CREMI — NAVIGATION VISIBLE SUR TÉLÉPHONE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        min-height: 58px;
+        padding: 6px 3%;
+    }
+
+    /* Logo plus compact */
+    .logo {
+        flex-shrink: 0;
+        gap: 5px;
+    }
+
+    .logo-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-text strong {
+        font-size: .78rem;
+    }
+
+    .logo-text span {
+        display: none;
+    }
+
+    /* Navigation toujours visible */
+    .navbar {
+        display: flex !important;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 13px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        padding: 5px 2px;
+    }
+
+    .navbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Liens de navigation */
+    .nav-link {
+        display: inline-flex;
+        flex-shrink: 0;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 7px 0;
+    }
+
+    /* Bouton contact */
+    .nav-contact {
+        flex-shrink: 0;
+        font-size: 9px;
+        padding: 7px 9px;
+        white-space: nowrap;
+    }
+
+    /* Cacher le bouton menu */
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* Cacher l'ancien menu déroulant */
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* Petits écrans */
+@media (max-width: 480px) {
+
+    .nav-container {
+        gap: 6px;
+        padding: 5px 2%;
+    }
+
+    .logo-image {
+        width: 27px;
+        height: 27px;
+    }
+
+    .logo-text strong {
+        font-size: .70rem;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 9px;
+    }
+
+    .nav-contact {
+        font-size: 8px;
+        padding: 6px 7px;
+    }
+}
+
 
 </style>
 
