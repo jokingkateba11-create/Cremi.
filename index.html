@@ -6163,6 +6163,49 @@ a:hover {
         background: #DCEAF5;
     }
 }
+    
+/* BOUTON EN SAVOIR PLUS — COMPACT ET ARRONDI */
+
+.more-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: fit-content;
+    padding: 9px 17px;
+
+    border-radius: 50px;
+    background: linear-gradient(135deg, #234F7C, #477DAF);
+
+    color: white !important;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+
+    border: 1px solid rgba(255,255,255,.2);
+    box-shadow: 0 4px 12px rgba(35,79,124,.15);
+
+    transition: all .3s ease;
+}
+
+.more-link::after {
+    content: "→";
+    color: #E7C65B;
+    font-size: 16px;
+    transition: transform .3s ease;
+}
+
+.more-link:hover {
+    background: linear-gradient(135deg, #28785D, #399B78);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(57,155,120,.2);
+}
+
+.more-link:hover::after {
+    transform: translateX(3px);
+}
+
 </style>
 
 <body>
